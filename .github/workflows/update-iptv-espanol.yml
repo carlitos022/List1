@@ -32,7 +32,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add iptv-espanol/espanol.m3u iptv-espanol/por-pais.m3u iptv-espanol/por-categoria.m3u iptv-espanol/ecuador.m3u iptv-espanol/ESTADISTICAS.txt
+          git add iptv-espanol/espanol.m3u
+          git add iptv-espanol/por-pais.m3u
+          git add iptv-espanol/por-categoria.m3u
+          git add iptv-espanol/ecuador.m3u
+          git add iptv-espanol/espanol-paises-y-categorias.m3u
+          git add iptv-espanol/ESTADISTICAS.txt
+          git add tv.m3u
           if git diff --cached --quiet; then
             echo "Sin cambios"
           else
