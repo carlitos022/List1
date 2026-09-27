@@ -2,79 +2,72 @@
 from __future__ import annotations
 
 import re
+import shutil
 import urllib.request
 from pathlib import Path
 from collections import Counter
 
 SOURCE = "https://iptv-org.github.io/iptv/languages/spa.m3u"
 OUTDIR = Path(__file__).resolve().parent
+ROOT = OUTDIR.parent
 USER_AGENT = "Mozilla/5.0 IPTV-Espanol-Classifier/1.0"
 
 COUNTRY_LABELS = {
-    "ec": "🇪🇨 Ecuador",
-    "es": "🇪🇸 España",
-    "co": "🇨🇴 Colombia",
-    "mx": "🇲🇽 Mexico",
-    "ar": "🇦🇷 Argentina",
-    "pe": "🇵🇪 Peru",
-    "cl": "🇨🇱 Chile",
-    "ve": "🇻🇪 Venezuela",
-    "bo": "🇧🇴 Bolivia",
-    "py": "🇵🇾 Paraguay",
-    "uy": "🇺🇾 Uruguay",
-    "cr": "🇨🇷 Costa Rica",
-    "pa": "🇵🇦 Panama",
-    "gt": "🇬🇹 Guatemala",
-    "hn": "🇭🇳 Honduras",
-    "sv": "🇸🇻 El Salvador",
-    "ni": "🇳🇮 Nicaragua",
-    "do": "🇩🇴 Republica Dominicana",
-    "pr": "🇵🇷 Puerto Rico",
-    "cu": "🇨🇺 Cuba",
+    "ec": "🇪🇨 Ecuador", "es": "🇪🇸 España", "co": "🇨🇴 Colombia",
+    "mx": "🇲🇽 Mexico", "ar": "🇦🇷 Argentina", "pe": "🇵🇪 Peru",
+    "cl": "🇨🇱 Chile", "ve": "🇻🇪 Venezuela", "bo": "🇧🇴 Bolivia",
+    "py": "🇵🇾 Paraguay", "uy": "🇺🇾 Uruguay", "cr": "🇨🇷 Costa Rica",
+    "pa": "🇵🇦 Panama", "gt": "🇬🇹 Guatemala", "hn": "🇭🇳 Honduras",
+    "sv": "🇸🇻 El Salvador", "ni": "🇳🇮 Nicaragua",
+    "do": "🇩🇴 Republica Dominicana", "pr": "🇵🇷 Puerto Rico", "cu": "🇨🇺 Cuba",
 }
 LATAM_CODES = {
-    "ec","co","mx","ar","pe","cl","ve","bo","py","uy","cr","pa","gt","hn","sv","ni","do","pr","cu"
+    "ec","co","mx","ar","pe","cl","ve","bo","py","uy","cr","pa",
+    "gt","hn","sv","ni","do","pr","cu"
 }
 COUNTRY_PRIORITY = ["ec","es","co","mx","ar","pe","cl","ve"]
 
 CATEGORY_LABELS = {
-    "sports": "⚽ Deportes",
-    "sport": "⚽ Deportes",
-    "movies": "🎬 Peliculas",
-    "movie": "🎬 Peliculas",
-    "series": "📺 Series",
-    "news": "📰 Noticias",
-    "music": "🎵 Musica",
-    "kids": "👶 Infantiles",
-    "children": "👶 Infantiles",
-    "documentary": "📚 Documentales",
-    "documentaries": "📚 Documentales",
-    "religious": "⛪ Religion",
-    "religion": "⛪ Religion",
-    "general": "📺 General",
-    "entertainment": "🎭 Entretenimiento",
-    "culture": "🎨 Cultura",
-    "family": "👨‍👩‍👧 Familiar",
-    "education": "🎓 Educacion",
-    "legislative": "🏛️ Legislativo",
-    "lifestyle": "🌿 Estilo de vida",
-    "business": "💼 Negocios",
-    "weather": "🌤️ Clima",
-    "travel": "✈️ Viajes",
-    "cooking": "🍳 Cocina",
-    "animation": "🧸 Animacion",
-    "comedy": "😂 Comedia",
-    "shop": "🛍️ Compras",
-    "science": "🔬 Ciencia",
-    "outdoor": "🏕️ Aire libre",
-    "classic": "🎞️ Clasicos",
-    "auto": "🚗 Motor",
+    "sports": "⚽ Deportes", "sport": "⚽ Deportes",
+    "movies": "🎬 Peliculas", "movie": "🎬 Peliculas",
+    "series": "📺 Series", "news": "📰 Noticias", "music": "🎵 Musica",
+    "kids": "👶 Infantiles", "children": "👶 Infantiles",
+    "documentary": "📚 Documentales", "documentaries": "📚 Documentales",
+    "religious": "⛪ Religion", "religion": "⛪ Religion",
+    "general": "📺 General", "entertainment": "🎭 Entretenimiento",
+    "culture": "🎨 Cultura", "family": "👨‍👩‍👧 Familiar",
+    "education": "🎓 Educacion", "legislative": "🏛️ Legislativo",
+    "lifestyle": "🌿 Estilo de vida", "business": "💼 Negocios",
+    "weather": "🌤️ Clima", "travel": "✈️ Viajes", "cooking": "🍳 Cocina",
+    "animation": "🧸 Animacion", "comedy": "😂 Comedia", "shop": "🛍️ Compras",
+    "science": "🔬 Ciencia", "outdoor": "🏕️ Aire libre",
+    "classic": "🎞️ Clasicos", "auto": "🚗 Motor",
 }
-
 CATEGORY_PRIORITY = [
     "⚽ Deportes", "🎬 Peliculas", "📺 Series", "📰 Noticias", "🎵 Musica",
     "👶 Infantiles", "📚 Documentales", "⛪ Religion", "📺 General",
     "🎭 Entretenimiento", "🎨 Cultura", "👨‍👩‍👧 Familiar", "🎓 Educacion"
+]
+
+SPECIAL_COUNTRIES = {
+    "ec": "ECUADOR", "es": "ESPANA", "co": "COLOMBIA", "mx": "MEXICO",
+    "ar": "ARGENTINA", "pe": "PERU", "cl": "CHILE", "ve": "VENEZUELA",
+}
+SPECIAL_COUNTRY_ORDER = [
+    "ECUADOR","ESPANA","COLOMBIA","MEXICO","ARGENTINA","PERU","CHILE",
+    "VENEZUELA","OTROS LATINOAMERICA"
+]
+SPECIAL_CATEGORY_MAP = {
+    "sports": "DEPORTES", "sport": "DEPORTES",
+    "movies": "PELICULAS", "movie": "PELICULAS",
+    "series": "SERIES", "news": "NOTICIAS", "music": "MUSICA",
+    "kids": "INFANTILES", "children": "INFANTILES",
+    "documentary": "DOCUMENTALES", "documentaries": "DOCUMENTALES",
+    "religious": "RELIGION", "religion": "RELIGION",
+}
+SPECIAL_CATEGORY_ORDER = [
+    "DEPORTES","PELICULAS","SERIES","NOTICIAS","MUSICA",
+    "INFANTILES","DOCUMENTALES","RELIGION"
 ]
 
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
@@ -110,8 +103,8 @@ def parse_entries(text: str):
         cat = CATEGORY_LABELS.get(original_group.lower(), f"📁 {original_group}")
         name = extinf.split(",", 1)[1].strip() if "," in extinf else tvg_id or url
         entries.append({
-            "extinf": extinf, "extras": extras, "url": url,
-            "cc": cc, "category": cat, "name": name
+            "extinf": extinf, "extras": extras, "url": url, "cc": cc,
+            "original_group": original_group, "category": cat, "name": name
         })
         i += 1
     return entries
@@ -128,8 +121,6 @@ def country_sort_key(cc: str):
         return (0, COUNTRY_PRIORITY.index(cc), "")
     if cc in LATAM_CODES:
         return (1, 0, country_label(cc))
-    if cc == "es":
-        return (0, 1, "")
     return (2, 0, country_label(cc))
 
 def category_sort_key(cat: str):
@@ -155,8 +146,6 @@ def write_playlist(path: Path, entries, mode: str):
             group = f"{country} • {cat}"
         elif mode == "country":
             group = country
-        elif mode == "category":
-            group = cat
         else:
             group = cat
         out.append(replace_group(e["extinf"], group))
@@ -164,11 +153,56 @@ def write_playlist(path: Path, entries, mode: str):
         out.append(e["url"])
     path.write_text("\n".join(out) + "\n", encoding="utf-8")
 
+def special_country_group(cc: str):
+    if cc in SPECIAL_COUNTRIES:
+        return SPECIAL_COUNTRIES[cc]
+    if cc in LATAM_CODES:
+        return "OTROS LATINOAMERICA"
+    return None
+
+def write_special_playlist(path: Path, entries):
+    locals_ = [e for e in entries if special_country_group(e["cc"])]
+    locals_.sort(key=lambda e: (
+        SPECIAL_COUNTRY_ORDER.index(special_country_group(e["cc"])),
+        e["name"].casefold()
+    ))
+
+    thematic = []
+    for e in entries:
+        group = SPECIAL_CATEGORY_MAP.get(e["original_group"].lower())
+        if group:
+            copy = dict(e)
+            copy["special_category"] = group
+            thematic.append(copy)
+    thematic.sort(key=lambda e: (
+        SPECIAL_CATEGORY_ORDER.index(e["special_category"]),
+        e["name"].casefold()
+    ))
+
+    out = ["#EXTM3U"]
+    for e in locals_:
+        out.append(replace_group(e["extinf"], special_country_group(e["cc"])))
+        out.extend(e["extras"])
+        out.append(e["url"])
+    for e in thematic:
+        out.append(replace_group(e["extinf"], e["special_category"]))
+        out.extend(e["extras"])
+        out.append(e["url"])
+
+    path.write_text("\n".join(out) + "\n", encoding="utf-8")
+    return len(locals_), len(thematic)
+
 def main():
     entries = parse_entries(download())
 
-    by_country = sorted(entries, key=lambda e: (country_sort_key(e["cc"]), category_sort_key(e["category"]), e["name"].casefold()))
-    by_category = sorted(entries, key=lambda e: (category_sort_key(e["category"]), country_sort_key(e["cc"]), e["name"].casefold()))
+    by_country = sorted(
+        entries,
+        key=lambda e: (country_sort_key(e["cc"]), category_sort_key(e["category"]), e["name"].casefold())
+    )
+    by_category = sorted(
+        entries,
+        key=lambda e: (category_sort_key(e["category"]), country_sort_key(e["cc"]), e["name"].casefold())
+    )
 
     write_playlist(OUTDIR / "espanol.m3u", by_country, "hybrid")
     write_playlist(OUTDIR / "por-pais.m3u", by_country, "country")
@@ -177,15 +211,26 @@ def main():
     ecuador = [e for e in by_country if e["cc"] == "ec"]
     write_playlist(OUTDIR / "ecuador.m3u", ecuador, "category")
 
+    special_path = OUTDIR / "espanol-paises-y-categorias.m3u"
+    local_count, thematic_count = write_special_playlist(special_path, entries)
+
+    # tv.m3u es siempre un espejo de la lista especial usada en Smart TV.
+    shutil.copyfile(special_path, ROOT / "tv.m3u")
+
     stats = Counter(country_label(e["cc"]) for e in entries)
     (OUTDIR / "ESTADISTICAS.txt").write_text(
         "Fuente: " + SOURCE + "\n"
-        + f"Canales procesados: {len(entries)}\n\n"
+        + f"Canales procesados: {len(entries)}\n"
+        + f"Entradas locales lista TV: {local_count}\n"
+        + f"Entradas tematicas lista TV: {thematic_count}\n\n"
         + "\n".join(f"{k}: {v}" for k, v in stats.most_common())
         + "\n",
         encoding="utf-8",
     )
-    print(f"Generadas listas con {len(entries)} canales; Ecuador: {len(ecuador)}")
+    print(
+        f"Generadas listas con {len(entries)} canales; "
+        f"Ecuador: {len(ecuador)}; TV: {local_count + thematic_count} entradas"
+    )
 
 if __name__ == "__main__":
     main()
