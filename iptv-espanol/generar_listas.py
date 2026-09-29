@@ -8,6 +8,30 @@ from pathlib import Path
 from collections import Counter
 
 SOURCE = "https://iptv-org.github.io/iptv/languages/spa.m3u"
+EXTRA_CATEGORY_SOURCES = {
+    "PELICULAS": "https://iptv-org.github.io/iptv/categories/movies.m3u",
+    "SERIES": "https://iptv-org.github.io/iptv/categories/series.m3u",
+}
+EXTRA_24_7_IDS = {
+    "PELICULAS": {
+        "CineRomantico.us@SD",
+        "PlutoTVComediasRomanticas.de@ES",
+        "PlutoTVSciFi.de@ES",
+        "PlutoTVSciFi.us@LatAm",
+        "PlutoTVZombies.de@ES",
+        "Medium.de@ES",
+        "StarTrekVoyager.de@ES",
+    },
+    "SERIES": {
+        "Medium.de@ES",
+        "PlutoTVSciFi.de@ES",
+        "PlutoTVSciFi.us@LatAm",
+        "PlutoTVTrueCrime.de@ES",
+        "PlutoTVZombies.de@ES",
+        "StarTrekVoyager.de@ES",
+        "TelemundoTelenovelasClasicas.us@SD",
+    },
+}
 OUTDIR = Path(__file__).resolve().parent
 ROOT = OUTDIR.parent
 USER_AGENT = "Mozilla/5.0 IPTV-Espanol-Classifier/1.0"
@@ -72,10 +96,13 @@ SPECIAL_CATEGORY_ORDER = [
 
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
-def download() -> str:
-    req = urllib.request.Request(SOURCE, headers={"User-Agent": USER_AGENT})
+def download_url(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read().decode("utf-8", "replace")
+
+def download() -> str:
+    return download_url(SOURCE)
 
 def parse_entries(text: str):
     lines = [ln.rstrip("\r") for ln in text.splitlines()]
@@ -104,6 +131,7 @@ def parse_entries(text: str):
         name = extinf.split(",", 1)[1].strip() if "," in extinf else tvg_id or url
         entries.append({
             "extinf": extinf, "extras": extras, "url": url, "cc": cc,
+            "tvg_id": tvg_id,
             "original_group": original_group, "category": cat, "name": name
         })
         i += 1
@@ -160,7 +188,7 @@ def special_country_group(cc: str):
         return "OTROS LATINOAMERICA"
     return None
 
-def write_special_playlist(path: Path, entries):
+def write_special_playlist(path: Path, entries, extra_categories=None):
     locals_ = [e for e in entries if special_country_group(e["cc"])]
     locals_.sort(key=lambda e: (
         SPECIAL_COUNTRY_ORDER.index(special_country_group(e["cc"])),
@@ -184,13 +212,46 @@ def write_special_playlist(path: Path, entries):
         out.append(replace_group(e["extinf"], special_country_group(e["cc"])))
         out.extend(e["extras"])
         out.append(e["url"])
+    seen_by_group = {
+        group: {
+            e.get("tvg_id", "")
+            for e in thematic
+            if e.get("special_category") == group and e.get("tvg_id")
+        }
+        for group in SPECIAL_CATEGORY_ORDER
+    }
+    seen_urls_by_group = {
+        group: {
+            e["url"]
+            for e in thematic
+            if e.get("special_category") == group
+        }
+        for group in SPECIAL_CATEGORY_ORDER
+    }
+
     for e in thematic:
         out.append(replace_group(e["extinf"], e["special_category"]))
         out.extend(e["extras"])
         out.append(e["url"])
 
+    extra_count = 0
+    if extra_categories:
+        for group in SPECIAL_CATEGORY_ORDER:
+            extras = extra_categories.get(group, [])
+            for e in extras:
+                tvg_id = e.get("tvg_id", "")
+                if (tvg_id and tvg_id in seen_by_group[group]) or e["url"] in seen_urls_by_group[group]:
+                    continue
+                out.append(replace_group(e["extinf"], group))
+                out.extend(e["extras"])
+                out.append(e["url"])
+                if tvg_id:
+                    seen_by_group[group].add(tvg_id)
+                seen_urls_by_group[group].add(e["url"])
+                extra_count += 1
+
     path.write_text("\n".join(out) + "\n", encoding="utf-8")
-    return len(locals_), len(thematic)
+    return len(locals_), len(thematic), extra_count
 
 def main():
     entries = parse_entries(download())
@@ -211,8 +272,20 @@ def main():
     ecuador = [e for e in by_country if e["cc"] == "ec"]
     write_playlist(OUTDIR / "ecuador.m3u", ecuador, "category")
 
+    extra_categories = {}
+    for group, url in EXTRA_CATEGORY_SOURCES.items():
+        category_entries = parse_entries(download_url(url))
+        allowed_ids = EXTRA_24_7_IDS[group]
+        extra_categories[group] = [
+            e for e in category_entries
+            if e["tvg_id"] in allowed_ids
+            and "[Not 24/7]" not in e["name"]
+        ]
+
     special_path = OUTDIR / "espanol-paises-y-categorias.m3u"
-    local_count, thematic_count = write_special_playlist(special_path, entries)
+    local_count, thematic_count, extra_count = write_special_playlist(
+        special_path, entries, extra_categories
+    )
 
     # tv.m3u es siempre un espejo de la lista especial usada en Smart TV.
     shutil.copyfile(special_path, ROOT / "tv.m3u")
@@ -222,14 +295,15 @@ def main():
         "Fuente: " + SOURCE + "\n"
         + f"Canales procesados: {len(entries)}\n"
         + f"Entradas locales lista TV: {local_count}\n"
-        + f"Entradas tematicas lista TV: {thematic_count}\n\n"
+        + f"Entradas tematicas lista TV: {thematic_count}\n"
+        + f"Canales extra 24/7: {extra_count}\n\n"
         + "\n".join(f"{k}: {v}" for k, v in stats.most_common())
         + "\n",
         encoding="utf-8",
     )
     print(
         f"Generadas listas con {len(entries)} canales; "
-        f"Ecuador: {len(ecuador)}; TV: {local_count + thematic_count} entradas"
+        f"Ecuador: {len(ecuador)}; TV: {local_count + thematic_count + extra_count} entradas"
     )
 
 if __name__ == "__main__":
