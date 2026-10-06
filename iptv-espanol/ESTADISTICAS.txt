@@ -1,27 +1,27 @@
 Fuente: https://iptv-org.github.io/iptv/languages/spa.m3u
-Canales procesados: 2322
-Entradas locales lista TV: 1930
-Entradas tematicas lista TV: 733
+Canales procesados: 2313
+Entradas locales lista TV: 1925
+Entradas tematicas lista TV: 727
 Canales extra 24/7: 14
 
-🌐 Otros en espanol: 392
+🌐 Otros en espanol: 388
 🇩🇴 Republica Dominicana: 246
-🇨🇱 Chile: 234
+🇨🇱 Chile: 229
 🇪🇸 España: 194
-🇦🇷 Argentina: 185
-🇲🇽 Mexico: 173
+🇦🇷 Argentina: 183
+🇲🇽 Mexico: 172
 🇵🇪 Peru: 172
-🇨🇴 Colombia: 118
+🇨🇴 Colombia: 119
 🇪🇨 Ecuador: 81
 🇭🇳 Honduras: 78
 🇻🇪 Venezuela: 72
 🇧🇴 Bolivia: 70
 🇨🇷 Costa Rica: 67
+🇵🇾 Paraguay: 65
 🇬🇹 Guatemala: 65
-🇵🇾 Paraguay: 64
 🇸🇻 El Salvador: 39
 🇵🇷 Puerto Rico: 24
 🇵🇦 Panama: 23
 🇳🇮 Nicaragua: 19
 🇨🇺 Cuba: 4
-🇺🇾 Uruguay: 2
+🇺🇾 Uruguay: 3
