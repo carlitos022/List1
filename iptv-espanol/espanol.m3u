@@ -1012,8 +1012,6 @@ http://138.59.227.20:8000/play/a05u/index.m3u8
 https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
 #EXTINF:-1 tvg-id="CanalTDC.ar@SD" tvg-logo="https://i.imgur.com/nPG38B2.png" group-title="🇦🇷 Argentina • 📰 Noticias",Canal TDC
 https://tdcserver.com:19360/tdconlione-2/tdconlione-2.m3u8
-#EXTINF:-1 tvg-id="CronicaTV.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Cr%C3%B3nica_TV_logotipo_%282008-2015%29.png" group-title="🇦🇷 Argentina • 📰 Noticias",Cronica TV (1080p)
-http://190.128.214.97:64333/play/a010/index.m3u8
 #EXTINF:-1 tvg-id="MercurioNoticias.ar@SD" tvg-logo="https://i.imgur.com/sfd87LX.png" group-title="🇦🇷 Argentina • 📰 Noticias",Mercurio Noticias
 https://videostream.shockmedia.com.ar/hls/mercuriotv/mercuriotv.m3u8
 #EXTINF:-1 tvg-id="QuanticaTV.ar@SD" tvg-logo="https://i.imgur.com/6f8EYC2.jpeg" group-title="🇦🇷 Argentina • 📰 Noticias",Quantica TV
@@ -2363,6 +2361,8 @@ https://627bb251f23c7.streamlock.net:444/ExtremaKids/ExtremaKids/playlist.m3u8
 https://video0.rogohosting.com:19360/8006/8006.m3u8
 #EXTINF:-1 tvg-id="GexTV.cr@HD" tvg-logo="https://gextv.com/LOGO-WHITE.png" group-title="🇨🇷 Costa Rica • 📁 Entertainment;Music",Gex TV (1080p)
 https://live20.bozztv.com/akamaissh101/ssh101/gextvaccess/playlist.m3u8
+#EXTINF:-1 tvg-id="HopeChannelPROYECTOJA.cr@SD" tvg-logo="https://i.imgur.com/VDyf36C.png" group-title="🇨🇷 Costa Rica • 📁 Family;Music;Religious",Hope Channel PROYECTO JA (360p)
+https://edge1-us-miami.picarto.tv/stream/hls/golive%2bXSTUDIOCODE/0_1/index.m3u8
 #EXTINF:-1 tvg-id="BestClasicosTV.cr@SD" tvg-logo="https://i.imgur.com/a/BRb8AVL.png" group-title="🇨🇷 Costa Rica • 📁 Undefined",BestClasicosTV (720p) [Not 24/7]
 https://acceso.mediosdecostarica.com:3873/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="SanVitoTelevision.cr@SD" tvg-logo="https://i.imgur.com/Yd7JOxr.png" group-title="🇨🇷 Costa Rica • 📁 Undefined",San Vito Television
@@ -3708,8 +3708,6 @@ http://38.224.231.176:8000/play/a01j/index.m3u8
 http://38.134.250.110:8000/play/a003/index.m3u8
 #EXTINF:-1 tvg-id="DiscoveryKidsLatinAmerica.us@Mexico" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Discovery_Kids_2021_2D_sin_wordmark.svg/960px-Discovery_Kids_2021_2D_sin_wordmark.svg.png" group-title="🌐 Otros en espanol • 👶 Infantiles",Discovery Kids Latin America Mexico (1080p)
 http://38.65.175.84:8000/play/a0an/index.m3u8
-#EXTINF:-1 tvg-id="DisneyChannel.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/2024_Disney_Channel_text_logo.svg/960px-2024_Disney_Channel_text_logo.svg.png" group-title="🌐 Otros en espanol • 👶 Infantiles",Disney Channel (United States) (720p) [Geo-blocked]
-http://212.5.144.156/disney/index.m3u8
 #EXTINF:-1 tvg-id="DisneyJunior.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/2024_Disney_Jr._Logo.svg/960px-2024_Disney_Jr._Logo.svg.png" group-title="🌐 Otros en espanol • 👶 Infantiles",Disney Junior (United States) (480p)
 http://tvsen5.aynascope.net/disney/index.m3u8
 #EXTINF:-1 tvg-id="DisneyXD.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/2015_Disney_XD_logo.svg/960px-2015_Disney_XD_logo.svg.png" group-title="🌐 Otros en espanol • 👶 Infantiles",Disney XD (United States) (720p)
@@ -4066,8 +4064,6 @@ https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cartoonnetwork.stream/chunks.m3u8
 https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanescc-rakutenes/playlist.m3u8
 #EXTINF:-1 tvg-id="Tooncast.us@SD" tvg-logo="https://i.imgur.com/3yXRbQy.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Tooncast (1080p)
 http://38.134.250.110:8000/play/a01t/index.m3u8
-#EXTINF:-1 tvg-id="Tooncast.us@SouthAmerica" tvg-logo="https://i.imgur.com/3yXRbQy.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Tooncast SouthAmerica (1080p)
-http://200.62.239.170:830/play/a07n/index.m3u8
 #EXTINF:-1 tvg-id="PlutoTVComediasRomanticas.de@ES" tvg-logo="https://images.pluto.tv/channels/655b5d865812e80008843bd1/colorLogoPNG_1747044085522.png" group-title="🌐 Otros en espanol • 📁 Comedy;Movies",Pluto TV Comedias Romanticas
 https://jmp2.uk/plu-655b5d865812e80008843bd1.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCocina.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1acdaa8ba90f0007d5e760/colorLogoPNG.png" group-title="🌐 Otros en espanol • 📁 Cooking;Lifestyle",Pluto TV Cocina
