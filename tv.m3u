@@ -3458,8 +3458,6 @@ http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
 https://jmp2.uk/plu-5dcde07af1c85b0009b18651.m3u8
 #EXTINF:-1 tvg-id="PlutoTVESports.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5ff3934600d4c7000733ff49/colorLogoPNG.png" group-title="DEPORTES",Pluto TV E-Sports
 https://jmp2.uk/plu-5ff3934600d4c7000733ff49.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSnooker900.de@ES" tvg-logo="https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png" group-title="DEPORTES",Pluto TV Snooker 900 (Germany) ES (720p)
-https://jmp2.uk/plu-69148c470155f9b136b5d856.m3u8
 #EXTINF:-1 tvg-id="PXSports.mx@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/PX_Sports_-_Logo.png/960px-PX_Sports_-_Logo.png" group-title="DEPORTES",PX Sports (1080p)
 http://38.252.238.18:8000/play/a02f/index.m3u8
 #EXTINF:-1 tvg-id="RealMadridTV.es@SD" tvg-logo="https://i.imgur.com/5pMo7dL.png" group-title="DEPORTES",Real Madrid TV (726p)
@@ -3639,12 +3637,8 @@ https://jmp2.uk/plu-5e972a21ad709d00074195ba.m3u8
 https://jmp2.uk/plu-654a35ce346f420008d5c36e.m3u8
 #EXTINF:-1 tvg-id="PlutoTVNuestroCine.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5defde6d6c07b50009cf0757/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Nuestro Cine
 https://jmp2.uk/plu-5defde6d6c07b50009cf0757.m3u8
-#EXTINF:-1 tvg-id="PlutoTVParanormal.de@ES" tvg-logo="https://images.pluto.tv/channels/5f98487036af340008da1e37/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Paranormal (Germany) ES
-https://jmp2.uk/plu-612ce5214bb5790007ad3016.m3u8
 #EXTINF:-1 tvg-id="PlutoTVPsycho.de@ES" tvg-logo="https://images.pluto.tv/channels/65ce480a78df2200131c597b/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Psycho
 https://jmp2.uk/plu-65ce480a78df2200131c597b.m3u8
-#EXTINF:-1 tvg-id="PlutoTVThrillers.de@ES" tvg-logo="https://images.pluto.tv/channels/5f1ac8a87cd38d000745d7cf/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Thrillers (Germany)
-https://jmp2.uk/plu-5f1ac8a87cd38d000745d7cf.m3u8
 #EXTINF:-1 tvg-id="PlutoTVWestern.de@ES" tvg-logo="https://images.pluto.tv/channels/630dd3b2605f140007e002f5/colorLogoPNG_1732030684562.png" group-title="PELICULAS",Pluto TV Western ES
 https://jmp2.uk/plu-6385e82900ab2e000768a058.m3u8
 #EXTINF:-1 tvg-id="PopcornCentral.mx@SD" tvg-logo="https://i.imgur.com/ULGVjyC.png" group-title="PELICULAS",Popcorn Central (1080p)
@@ -3756,7 +3750,7 @@ https://jmp2.uk/plu-686eed4c677f2f98b4a1ccd4.m3u8
 https://jmp2.uk/plu-6474a86917f5e100089a0c1c.m3u8
 #EXTINF:-1 tvg-id="PlutoTVNovelas.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5f512365abe1f50007d3ff56/colorLogoPNG.png" group-title="SERIES",Pluto TV Novelas LatAm
 https://jmp2.uk/plu-5dcde0cc2efd2700090b7ff4.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSeries.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5dcde1317578340009b751d0/colorLogoPNG.png" group-title="SERIES",Pluto TV Series (United States)
+#EXTINF:-1 tvg-id="PlutoTVSeries.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5dcde1317578340009b751d0/colorLogoPNG.png" group-title="SERIES",Pluto TV Series
 https://jmp2.uk/plu-5dcde1317578340009b751d0.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriescriminales.de@ES" tvg-logo="https://images.pluto.tv/channels/65cf6ab58145cb0008129ca8/colorLogoPNG.png" group-title="SERIES",Pluto TV Series criminales
 https://jmp2.uk/plu-65cf6ab58145cb0008129ca8.m3u8
@@ -3774,8 +3768,6 @@ https://jmp2.uk/plu-6806d570c178637410ae4962.m3u8
 https://jmp2.uk/plu-65662f8a2c46f300088a84cc.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSeriesLatinas.us@LatAm" tvg-logo="https://images.pluto.tv/channels/5dd837642c6e9300098ad484/colorLogoPNG.png" group-title="SERIES",Pluto TV Series Latinas
 https://jmp2.uk/plu-5dd837642c6e9300098ad484.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSeriesSciFi.de@ES" tvg-logo="https://images.pluto.tv/channels/65ddec1ef7f0af0008be4b65/colorLogoPNG.png" group-title="SERIES",Pluto TV Series Sci-Fi (Germany)
-https://jmp2.uk/plu-65ddec1ef7f0af0008be4b65.m3u8
 #EXTINF:-1 tvg-id="PlutoTVTelenovelasClasicas.de@ES" tvg-logo="https://images.pluto.tv/channels/662a69daa0a74e00087a1c72/colorLogoPNG.png" group-title="SERIES",Pluto TV Telenovelas Clasicas
 https://jmp2.uk/plu-662a69daa0a74e00087a1c72.m3u8
 #EXTINF:-1 tvg-id="Sintetasnohayparaiso.us@Spain" tvg-logo="https://i.imgur.com/fpwU2IQ.png" group-title="SERIES",Sin tetas no hay paraiso
@@ -4760,20 +4752,14 @@ https://d1si3n1st4nkgb.cloudfront.net/10502/88886011/hls/master.m3u8?ads.xumo_ch
 https://jmp2.uk/plu-6578808014fbe400086e21bc.m3u8
 #EXTINF:-1 tvg-id="PlutoTVComediasRomanticas.de@ES" tvg-logo="https://images.pluto.tv/channels/655b5d865812e80008843bd1/colorLogoPNG_1747044085522.png" group-title="PELICULAS",Pluto TV Comedias Romanticas
 https://jmp2.uk/plu-655b5d865812e80008843bd1.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSciFi.de@ES" tvg-logo="https://images.pluto.tv/channels/60ed498c4248a400077c0b9d/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Sci-Fi (Germany) ES
-https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSciFi.us@LatAm" tvg-logo="https://images.pluto.tv/channels/66166cb1307fa30008f275e7/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Sci-Fi (United States) LatAm
 https://jmp2.uk/plu-5f2817d3d7573a00080f9175.m3u8
 #EXTINF:-1 tvg-id="PlutoTVZombies.de@ES" tvg-logo="https://images.pluto.tv/channels/65786888b228b7000843ad9a/colorLogoPNG.png" group-title="PELICULAS",Pluto TV Zombies
 https://jmp2.uk/plu-65786888b228b7000843ad9a.m3u8
 #EXTINF:-1 tvg-id="Medium.de@ES" tvg-logo="https://images.pluto.tv/channels/6578808014fbe400086e21bc/colorLogoPNG.png" group-title="SERIES",Medium (Germany)
 https://jmp2.uk/plu-6578808014fbe400086e21bc.m3u8
-#EXTINF:-1 tvg-id="PlutoTVSciFi.de@ES" tvg-logo="https://images.pluto.tv/channels/60ed498c4248a400077c0b9d/colorLogoPNG.png" group-title="SERIES",Pluto TV Sci-Fi (Germany) ES
-https://jmp2.uk/plu-5f6a38eaa5b68b0007a00e7a.m3u8
 #EXTINF:-1 tvg-id="PlutoTVSciFi.us@LatAm" tvg-logo="https://images.pluto.tv/channels/66166cb1307fa30008f275e7/colorLogoPNG.png" group-title="SERIES",Pluto TV Sci-Fi (United States) LatAm
 https://jmp2.uk/plu-5f2817d3d7573a00080f9175.m3u8
-#EXTINF:-1 tvg-id="PlutoTVTrueCrime.de@ES" tvg-logo="https://images.pluto.tv/channels/615333098185f00008715a56/colorLogoPNG.png" group-title="SERIES",Pluto TV True Crime (Germany) ES
-https://jmp2.uk/plu-64a3f200f238ce0008d47247.m3u8
 #EXTINF:-1 tvg-id="PlutoTVZombies.de@ES" tvg-logo="https://images.pluto.tv/channels/65786888b228b7000843ad9a/colorLogoPNG.png" group-title="SERIES",Pluto TV Zombies
 https://jmp2.uk/plu-65786888b228b7000843ad9a.m3u8
 #EXTINF:-1 tvg-id="TelemundoTelenovelasClasicas.us@SD" tvg-logo="https://i.imgur.com/9bPcYIN.png" group-title="SERIES",Telemundo Telenovelas Clasicas
