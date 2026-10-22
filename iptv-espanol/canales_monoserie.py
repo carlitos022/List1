@@ -29,12 +29,12 @@ CATALOGO = {
     "iCarly": ("Infancia", ("iCarly", "SuperIcarly")),
     "Kenan & Kel": ("Infancia", ("KenanKel", "KenanAndKel")),
     "Danny Phantom": ("Infancia", ("DannyPhantom",)),
-    "Los padrinos mágicos": ("Infancia", ("TheFairlyOddParents", "LosPadrinosMagicos")),
+    "Los padrinos mágicos": ("Infancia", ("TheFairlyOddParents", "LosPadrinosMagicos", "FairlyOddParents")),
     "Pingu": ("Infancia", ("Pingu",)),
     "Teletubbies": ("Infancia", ("Teletubbies",)),
-    "Peppa Pig": ("Infancia", ("PeppaPig",)),
+    "Peppa Pig": ("Infancia", ("PeppaPig", "PeppaPigTV")),
     "Pocoyó": ("Infancia", ("Pocoyo",)),
-    "Garfield y sus amigos": ("Infancia", ("GarfieldAndFriends", "Garfieldysusamigos")),
+    "Garfield y sus amigos": ("Infancia", ("GarfieldAndFriends", "Garfieldysusamigos", "GarfieldandFriends")),
     "Coraje el perro cobarde": ("Infancia", ("CorajeElPerroCobarde", "CourageTheCowardlyDog")),
     "El laboratorio de Dexter": ("Infancia", ("DextersLaboratory", "ElLaboratoriodeDexter")),
     "Tom y Jerry": ("Infancia", ("TomAndJerry", "TomyJerry")),
@@ -42,7 +42,7 @@ CATALOGO = {
     "Los Picapiedra": ("Infancia", ("TheFlintstones", "LosPicapiedra")),
     "Los Supersónicos": ("Infancia", ("TheJetsons", "LosSupersonicos")),
     "Las Tortugas Ninja": ("Infancia", ("TeenageMutantNinjaTurtles", "LasTortugasNinja")),
-    "Los Pitufos": ("Infancia", ("TheSmurfs", "LosPitufos")),
+    "Los Pitufos": ("Infancia", ("TheSmurfs", "LosPitufos", "OsSmurfs")),
     "El Chavo": ("Infancia", ("ElChavoTV", "ElChavo", "ElChavoAnimado")),
     "Las aventuras de Bob el Constructor": ("Infancia", ("BobTheBuilder",)),
     "Winx Club": ("Infancia", ("WinxClub",)),
@@ -52,7 +52,7 @@ CATALOGO = {
     "Dragon Ball Z": ("Anime", ("DragonBallZ",)),
     "Dragon Ball GT": ("Anime", ("DragonBallGT",)),
     "Dragon Ball": ("Anime", ("DragonBall",)),
-    "Pokémon": ("Anime", ("Pokemon",)),
+    "Pokémon": ("Anime", ("Pokemon", "PlutoTVPokemon", "PokemonenEspanol")),
     "Digimon": ("Anime", ("Digimon", "DigimonAdventure")),
     "Sailor Moon": ("Anime", ("SailorMoon",)),
     "Naruto": ("Anime", ("Naruto", "NarutoShippuden")),
@@ -67,7 +67,7 @@ CATALOGO = {
     "Los Vengadores": ("Superhéroes", ("Avengers", "TheAvengers", "LosVengadores")),
     "Batman: La serie animada": ("Superhéroes", ("BatmanTheAnimatedSeries", "BatmanLaSerieAnimada")),
     "Smallville": ("Series", ("Smallville",)),
-    "The Walking Dead": ("Series", ("TheWalkingDead",)),
+    "The Walking Dead": ("Series", ("TheWalkingDead", "TheWalkingDeadenEspanol", "TheWalkingDeadbyAMC")),
     "Breaking Bad": ("Series", ("BreakingBad",)),
     "Dr. House": ("Series", ("HouseMD", "DrHouse", "House")),
     "Supernatural": ("Series", ("Supernatural",)),
@@ -115,7 +115,8 @@ def identificar(entry: dict) -> tuple[str, str] | None:
         return None
     name = entry.get("name", "").strip()
     name = re.sub(r"\s*[\(\[](?:\d{3,4}p|HD|SD|FHD|4K|LatAm|US|Spain|Germany)[\)\]]", "", name, flags=re.I)
-    name = re.sub(r"\s+24\s*/\s*7$", "", name)
+    name = re.sub(r"\\s+24\\s*/\\s*7$", "", name)
+    name = re.sub(r"\\s*\\[(?:Geo-blocked|Not 24/7)\\]$", "", name, flags=re.I)
     return INDEX.get(slug(name))
 
 
