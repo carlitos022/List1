@@ -35,6 +35,41 @@
       "url": "https://iptv-org.github.io/iptv/categories/comedy.m3u",
       "sha256": "c7047b7e2bd6d126395eeea2434cce510c38bd5421b4134bfd4c64909a758897",
       "entradas": 217
+    },
+    "index.m3u": {
+      "url": "https://iptv-org.github.io/iptv/index.m3u",
+      "sha256": "8abc5a8763d4029abec9434f037ca56d9a13982428e6a90611cc8316c92148ef",
+      "entradas": 11362
+    },
+    "mx_pluto.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx_pluto.m3u",
+      "sha256": "613e353024c87db442f5f33ad77750c251d2fbcda2d0ecbf55cc2d7be8f9b5b1",
+      "entradas": 193
+    },
+    "es_pluto.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es_pluto.m3u",
+      "sha256": "7b5d0cb321c4cf535a6f4c495fbdfbaf01a4561c61e3fbcdc65b4f7eb200b6c3",
+      "entradas": 137
+    },
+    "us_pluto.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u",
+      "sha256": "c518dfb1d02e7e9dcd571f8e1369ad541893bafdc98ebef61c3ac8e6f72a1b7f",
+      "entradas": 400
+    },
+    "uk_pluto.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_pluto.m3u",
+      "sha256": "0a10ab568058ead32e48ed24653b81bf426609d096e7b6fd92232c1ce2a85979",
+      "entradas": 185
+    },
+    "us_samsung.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_samsung.m3u",
+      "sha256": "2b5c14884dbb458e285d482eb6ffcb270c4638197e9310f823b79f3bfc3cac75",
+      "entradas": 407
+    },
+    "uk_samsung.m3u": {
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_samsung.m3u",
+      "sha256": "affc3c66872bb09911ab15a1b1378934e35880280771529f8c127d1da4dc34e9",
+      "entradas": 176
     }
   }
 }
