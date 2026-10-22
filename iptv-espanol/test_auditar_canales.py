@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from datetime import date
 import io
+from pathlib import Path
+import tempfile
 import unittest
 import urllib.error
 from unittest.mock import patch
@@ -57,6 +59,28 @@ class AuditorTests(unittest.TestCase):
         self.assertEqual(uncertain["consecutive_down"], 2)
         healthy = health.update_record(uncertain, "up", "HLS OK", "2026-10-24")
         self.assertEqual(healthy["consecutive_down"], 0)
+
+    def test_playlist_estricta_solo_publica_probados(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            inp = Path(tmp) / "all.m3u"
+            out = Path(tmp) / "verified.m3u"
+            inp.write_text(
+                '#EXTM3U\n'
+                '#EXTINF:-1 group-title="24/7",Canal vivo\n'
+                'https://example.org/good.m3u8\n'
+                '#EXTINF:-1 group-title="24/7",Canal caído\n'
+                'https://example.org/bad.m3u8\n',
+                encoding="utf-8",
+            )
+            with patch.object(health, "VERIFIED_PLAYLISTS", {inp: out}):
+                counts = health.write_verified_only({
+                    "https://example.org/good.m3u8": "up",
+                    "https://example.org/bad.m3u8": "unknown",
+                })
+            self.assertEqual(counts[out.name], 1)
+            text = out.read_text(encoding="utf-8")
+            self.assertIn("good.m3u8", text)
+            self.assertNotIn("bad.m3u8", text)
 
     def test_tv_espanol_sin_paginas_web(self):
         entry = {"cc": "es", "tvg_id": "Test.es@SD",

@@ -55,3 +55,14 @@ La acción [Auditar disponibilidad IPTV](../.github/workflows/auditar-iptv.yml) 
 Los resultados se conservan en `salud_canales.json` y en el resumen [REPORTE_SALUD.md](REPORTE_SALUD.md) (se genera en la primera auditoría completa). La lista manual `dead_urls.txt` sigue vigente. Todas las salidas y la URL habitual `tv.m3u` conservan sus rutas.
 
 **Frecuencia:** fuentes cada 3 horas y prueba profunda una vez al día. Para ejecutarla de inmediato: pestaña **Actions**, flujo **Auditar disponibilidad IPTV (HLS)**, botón **Run workflow**.
+
+## Listas estrictas comprobadas
+
+Después de cada auditoría profunda, el proceso publica listas alternativas que **solo contienen enlaces con respuesta multimedia positiva** desde GitHub Actions:
+
+- Lista general: `../tv-verificada.m3u`
+- Canales lineales: `24-7-verificados.m3u`
+- Películas: `peliculas-verificadas.m3u`
+- Series: `series-verificadas.m3u`
+
+Estas listas pueden ser más cortas: descartan tanto los enlaces caídos como aquellos sin confirmación (p. ej. geobloqueos). Las originales se conservan completas con eliminación conservadora por fallos persistentes. La comprobación positiva no garantiza continuidad de 24 horas ni acceso desde todos los países; el reporte registra la fecha de la última auditoría.

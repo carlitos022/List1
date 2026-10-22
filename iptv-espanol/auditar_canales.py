@@ -27,6 +27,13 @@ STATE = DIR / "salud_canales.json"
 REPORT = DIR / "REPORTE_SALUD.md"
 PLAYLISTS = [ROOT / "tv.m3u", DIR / "24-7.m3u",
              DIR / "peliculas.m3u", DIR / "series.m3u"]
+VERIFIED_PLAYLISTS = {
+    ROOT / "tv.m3u": ROOT / "tv-verificada.m3u",
+    DIR / "24-7.m3u": DIR / "24-7-verificados.m3u",
+    DIR / "peliculas.m3u": DIR / "peliculas-verificadas.m3u",
+    DIR / "series.m3u": DIR / "series-verificadas.m3u",
+}
+
 AGENT = "Mozilla/5.0 IPTV-PublicHealthChecker/1.0"
 MAX_READ = 16384
 
@@ -197,6 +204,31 @@ def load_urls() -> tuple[list[str], dict[str, set[str]]]:
     return sorted(urls), groups
 
 
+def write_verified_only(checked: dict[str, str]) -> dict[str, int]:
+    """Sólo publica una señal cuando la respuesta multimedia fue positiva.
+
+    No retira nada de las listas principales: sirve una alternativa estricta
+    para usuarios que prefieren menos canales con comprobación positiva reciente.
+    """
+    counts = {}
+    for original, destination in VERIFIED_PLAYLISTS.items():
+        if not original.exists():
+            continue
+        entries = parse_entries(original.read_text(encoding="utf-8"))
+        lines = ["#EXTM3U"]
+        kept = 0
+        for entry in entries:
+            if checked.get(entry["url"]) != "up":
+                continue
+            lines.append(entry["extinf"])
+            lines.extend(entry["extras"])
+            lines.append(entry["url"])
+            kept += 1
+        destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        counts[destination.name] = kept
+    return counts
+
+
 def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
     urls, groups = load_urls()
     if limit > 0:
@@ -229,6 +261,7 @@ def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
         "unknown": sum(verified.get(url) == "unknown" for url in group),
     } for name, group in groups.items()}
     if not limit:
+        verified_counts = write_verified_only(verified)
         STATE.write_text(
             json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
             encoding="utf-8",
@@ -245,6 +278,10 @@ def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
             "",
             "La prueba verifica acceso desde GitHub Actions, no reproducción mundial ni 24 horas continuas.",
             "Solamente se excluyen enlaces que fallan de forma concluyente en dos días de auditoría.",
+            "",
+            "## Listas con comprobación positiva reciente",
+            "",
+            *[f"- {name}: {count} entradas" for name, count in verified_counts.items()],
             "",
             "## Resultados por lista",
             "",

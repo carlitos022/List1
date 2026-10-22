@@ -59,12 +59,25 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tv.m3u iptv-espanol/*.m3u iptv-espanol/ESTADISTICAS.txt
-          git add iptv-espanol/fuentes_estado.json
-          git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md
-          if git diff --cached --quiet; then
-            echo "Sin cambios en canales o salud"
-          else
+          for intento in 1 2 3; do
+            git fetch origin main
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+              echo "Cambio remoto detectado: revalidando playlists actuales"
+              git reset --hard origin/main
+              python iptv-espanol/sincronizar_fuentes.py --force
+              python iptv-espanol/auditar_canales.py --workers 42 --timeout 4
+              python iptv-espanol/filtrar_muertos.py
+            fi
+            git add tv.m3u tv-verificada.m3u iptv-espanol/*.m3u
+            git add iptv-espanol/ESTADISTICAS.txt
+            git add iptv-espanol/fuentes_estado.json
+            git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md
+            if git diff --cached --quiet; then
+              echo "No hubo cambios de auditoría"
+              exit 0
+            fi
             git commit -m "Auditar y depurar disponibilidad IPTV"
-            git push
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Conflicto de publicación, reintentando..."
+          done
+          exit 1
