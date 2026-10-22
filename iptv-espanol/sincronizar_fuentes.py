@@ -26,6 +26,9 @@ SOURCES = {
     "movies.m3u": (generador.EXTRA_CATEGORY_SOURCES["PELICULAS"], 10),
     "series.m3u": (generador.EXTRA_CATEGORY_SOURCES["SERIES"], 10),
     "playlist.m3u8": (generador.FREE_TV_SOURCE, 100),
+    "kids.m3u": (generador.SHOW_SOURCE_URLS["kids.m3u"], 10),
+    "animation.m3u": (generador.SHOW_SOURCE_URLS["animation.m3u"], 10),
+    "comedy.m3u": (generador.SHOW_SOURCE_URLS["comedy.m3u"], 10),
 }
 OUTPUTS = {
     "tv.m3u": (ROOT / "tv.m3u", 500),
@@ -33,7 +36,7 @@ OUTPUTS = {
     "por-pais.m3u": (DIR / "por-pais.m3u", 500),
     "por-categoria.m3u": (DIR / "por-categoria.m3u", 500),
     "ecuador.m3u": (DIR / "ecuador.m3u", 10),
-    "24-7.m3u": (DIR / "24-7.m3u", 20),
+    "24-7.m3u": (DIR / "24-7.m3u", 0),
     "peliculas.m3u": (DIR / "peliculas.m3u", 10),
     "series.m3u": (DIR / "series.m3u", 10),
     "espanol-paises-y-categorias.m3u": (
@@ -86,7 +89,8 @@ def descargar_con_reintentos(url: str) -> str:
 
 
 def salidas_disponibles() -> bool:
-    return all(ruta.is_file() and ruta.stat().st_size > 100 for ruta, _ in OUTPUTS.values())
+    return all(ruta.is_file() and ruta.stat().st_size > (7 if nombre == "24-7.m3u" else 100)
+               for nombre, (ruta, _) in OUTPUTS.items())
 
 
 def validar_salidas() -> None:

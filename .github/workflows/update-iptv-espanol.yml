@@ -11,6 +11,8 @@ on:
     branches: [main]
     paths:
       - "iptv-espanol/generar_listas.py"
+      - "iptv-espanol/canales_monoserie.py"
+      - "iptv-espanol/test_canales_monoserie.py"
       - "iptv-espanol/sincronizar_fuentes.py"
       - "iptv-espanol/filtrar_muertos.py"
       - "iptv-espanol/dead_urls.txt"
@@ -58,6 +60,7 @@ jobs:
               python iptv-espanol/sincronizar_fuentes.py --force
             fi
             git add iptv-espanol/24-7.m3u
+            git add iptv-espanol/24-7-PENDIENTES.md
             git add iptv-espanol/peliculas.m3u
             git add iptv-espanol/series.m3u
             git add iptv-espanol/espanol.m3u

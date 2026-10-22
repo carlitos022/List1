@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - "iptv-espanol/auditar_canales.py"
+      - "iptv-espanol/generar_listas.py"
+      - "iptv-espanol/canales_monoserie.py"
       - "iptv-espanol/filtrar_muertos.py"
       - ".github/workflows/auditar-iptv.yml"
   pull_request:
@@ -69,7 +71,7 @@ jobs:
               python iptv-espanol/filtrar_muertos.py
             fi
             git add tv.m3u tv-verificada.m3u iptv-espanol/*.m3u
-            git add iptv-espanol/ESTADISTICAS.txt
+            git add iptv-espanol/ESTADISTICAS.txt iptv-espanol/24-7-PENDIENTES.md
             git add iptv-espanol/fuentes_estado.json
             git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md
             if git diff --cached --quiet; then
