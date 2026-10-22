@@ -83,7 +83,7 @@ class SincronizacionTests(unittest.TestCase):
                 self.assertEqual((root / "tv.m3u").read_bytes(), primero)
 
                 # Fuente actualizada: publica de nuevo.
-                respuestas[generador.SOURCE] = espanol.replace("Canal 0", "Canal actualizado 0", 1)
+                respuestas[generador.SOURCE] = espanol.replace("Canal 1", "Canal actualizado 1", 1)
                 sync.sincronizar(False)
                 self.assertNotEqual((root / "tv.m3u").read_bytes(), primero)
 
