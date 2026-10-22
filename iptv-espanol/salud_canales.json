@@ -86,8 +86,8 @@
   "0298826d0876913813cc8b60eb5e99a197a933a8a01a46d905918f7c652e9ad0": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "02ded761ff2ac5cde654ea93a92a2594f2b0d961811af5d3730f55fbf95daf09": {
     "consecutive_down": 0,
@@ -170,8 +170,8 @@
   "057db9885b5270096b12b43bc2435633657f5b813c9ac85c4626d371dc26189e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "05896a537a0d6352db491adc96bac3494f30e6673fa3b2ab4c6f14b4871e4d19": {
     "consecutive_down": 0,
@@ -362,8 +362,8 @@
   "091d73589801a70c0285144ce512574637f3f267e235a58b51a6b769c409fbe2": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "09632a8aa2ff9ed74fc9048e7bdc1effc24f6feca344a1975f27fbc6d093a14a": {
     "consecutive_down": 0,
@@ -386,8 +386,8 @@
   "09d3ecb42296552fb4bcd4c27a8c999825bad5dce075798c68f91d19fccf0a0b": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "09da09fe23049a3e21a379e5d674801e76b461be1bc1be951bb93a8682627b8e": {
     "consecutive_down": 1,
@@ -462,10 +462,10 @@
     "state": "up"
   },
   "0b88cba853820edd9af63e906598679298de84572d58abb591292712ee08f608": {
-    "consecutive_down": 1,
+    "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "0b8a6f1dc7259bb9626c6ccc2bf631a0d121d19d39664267ead161a6fbfd727c": {
     "consecutive_down": 0,
@@ -632,8 +632,8 @@
   "0fb8a352ca2a16c58ab3204dd25c3ee21ce83fe04699904d9f04c8e14962f567": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: TimeoutError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "10011e695e06cf01f221ec0840fe8558124987c124e43875be9d067d5cd46d75": {
     "consecutive_down": 0,
@@ -644,8 +644,8 @@
   "100f3506d4735afb1ecabd87f2fccd7e8751df12c1e9e6014b01ab211f8728ce": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "10367df14ee07ca48ff6552a871bdd60ad64b476311aa0445181e91053522b19": {
     "consecutive_down": 0,
@@ -1022,8 +1022,8 @@
   "185d68e357d4191893c346209cbeff9886b35241af22e84d6f9bc0608f3b85c4": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "186b3ae815c9c244d73a7bdc5c30a2627da829ecbd1993ede270cdb31c339d09": {
     "consecutive_down": 0,
@@ -1094,8 +1094,8 @@
   "1a3af6399cc954a3b396938b5e0b31f1f56223d2212824a5046d312b940d3654": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 403 (posible bloqueo o fallo temporal)",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "1aa05ba773c46e582ce70826106b630fad1f0e87504fbb65d9cd75a27feb31be": {
     "consecutive_down": 0,
@@ -1502,8 +1502,8 @@
   "2497ca9776db2d2d9f85d0cec7bbaa4c56a297a41d345e16b403d9a6f920c789": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: TimeoutError",
+    "state": "unknown"
   },
   "24b158e02194f00ce7d609b33543e8c9e0faae28941707c3eb1f5fe8102b0371": {
     "consecutive_down": 0,
@@ -1532,8 +1532,8 @@
   "250ac312fbfa27c86ce3c77d04d8b59a5509ba5c11d741dc1421c192555f0e97": {
     "consecutive_down": 1,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "25221159779b70644dc44e571a2fe7cb92bae1c4fdff65dd22750e03c15620ae": {
     "consecutive_down": 0,
@@ -1544,8 +1544,8 @@
   "256534e2453554f7277bad795c3026181e3d34d5d97d1dc56d1100e3730a3dfd": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "2574779e47e7c56d6278258695c07a8c83a0e1c79ba19ccd8ad6ae2feae3a638": {
     "consecutive_down": 0,
@@ -1880,14 +1880,14 @@
   "2b622f52d595e01c787eb7864f907d5235b5ec86ce32d5354ba10084dcd7ee05": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "2b77ae3f7e9030f1a13130eb25dccee784edb89191fe526cb222a29e7cc7b2ff": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "2b9b679b25a764ea8d39cdcf43827b0429032ade7587b1352d326695b27a3572": {
     "consecutive_down": 0,
@@ -1964,14 +1964,14 @@
   "2dd5f634a9d60a54e06060962243fc57351085b4e685d6f0158126798e119dce": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "2dfbd5c0e0d13a8ac179ad6cde46a6117c980ec95766af58bf4a2d5547c35f57": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "2e2dfcffc1d5b51e6659a45f298ce16271c46aa940a53c41ae1d8354c6273fa0": {
     "consecutive_down": 0,
@@ -2258,8 +2258,8 @@
   "35203410173f38ea03875eacb985a0c291961e8509260d1dcade13eb114cacd1": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "353340653796ba32c54df3faf7f8e65e262576a104c59d725ecf249deef56e6e": {
     "consecutive_down": 0,
@@ -2390,14 +2390,14 @@
   "377c782cf9ddcb94e11a0e4864007d22fb231bfe4b01d8dda7b0c2adb09623fd": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "37e5f59ba4441eb2fde1832b560f71e1e554ddddfb74ce2424b6c057afddbc30": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "37f2cf7094a250502664867f586d50cf03d6d911058831ba4eb72a05f2f92376": {
     "consecutive_down": 0,
@@ -2414,8 +2414,8 @@
   "380c95571d1f17304e1772560b314004e2bea444201969cf2851e89163bc4324": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "381135e9304d14722ac94795b46e7395c66019adc0a60c90bf0ce9cb1ac58658": {
     "consecutive_down": 0,
@@ -2450,8 +2450,8 @@
   "38c7b2f5fa1d50b3b6ec81105fe432148a37ba540e7870f45cf54b567e3fa20e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "39289cf24c561f8ede59dbcef8b543f6951b8404caab6032d54d79732e4dc429": {
     "consecutive_down": 0,
@@ -2768,14 +2768,14 @@
   "3fa9ef435cf7443de2fbae6657bc036ec9b84337f83c8f521328929af994aedf": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "3fc3d93ea3486f7a6eb625c092b025819a501d8b92fa03df7781dd6d8543b313": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "401130d3f973a41a839bc74721c7b151f46bb0eaa3976139c06767d97612ae0a": {
     "consecutive_down": 0,
@@ -2882,7 +2882,7 @@
   "4262b57320c55bcadb8bfb7dbc95694bf731176e28595a9fcc2838eec55278b3": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: TimeoutError",
+    "reason": "Sin respuesta concluyente: URLError",
     "state": "unknown"
   },
   "426c4e39ae067eda4d7e990a92e1e9b0d4aefe02dc2ff868202ae16aca25e5e3": {
@@ -3044,8 +3044,8 @@
   "452279b590287f17ab98de54e7a6f6dae2dc0791c0160d4342de433241179d47": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "45406ab13d156746fbb8b1450b28b011257cc4cc68aef6e1c42abadc69eb0272": {
     "consecutive_down": 0,
@@ -3122,8 +3122,8 @@
   "46c810103e80490338a7d3c354aecca5877df4ee25112ef43415fa3d17647c9b": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "46cf52698499845bf1217808e74a033ea5bcdb47312ec1b1d375db744a931607": {
     "consecutive_down": 0,
@@ -3416,8 +3416,8 @@
   "4cda7c3e888d632878a845f96e6f3d2950a60ea125a7c279a968b58a468240c1": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "4cfc84f135d7175bc0b388b63c759277d9653ffce45a653d57975aad4a780398": {
     "consecutive_down": 0,
@@ -3440,8 +3440,8 @@
   "4d29a66f1bde786331a41e8aab2c9b03583c014876caf0e20a93fefa3bdd5275": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "4d2b585f91eb16144e1c6154f5f2c04bd1358057947d76778f90b9f8bdef2eba": {
     "consecutive_down": 0,
@@ -3710,8 +3710,8 @@
   "52b2489fc107f58f8822a4f0ce9ae555c6f74a6043158896469f9355021f3619": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "52f9c599ceb9a624f2e98bb9586a164a706c2f2a48a9e9e60e7562e6b0588c88": {
     "consecutive_down": 0,
@@ -3776,14 +3776,14 @@
   "54f257ead2dd7770c4199a79cc604e923df58f7398cac08583b9dadcfc17aa3b": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "54fe87da20cf93e39f5e0ac0c77fc2c2ebb0ef4776811f4f93aab1f55709d905": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "54fee10b507d69b112ea6adb721005923e4650066ac6aadd74efedfdc30541bf": {
     "consecutive_down": 0,
@@ -3938,8 +3938,8 @@
   "570cf086d5ddb274b8003df403f0b01c7d88fdee4f2d748fe2db987b4f43ff03": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "570e411d8d02a51a4844e5cd8fbb62059117e98538580f66534d331112ed0001": {
     "consecutive_down": 0,
@@ -4040,8 +4040,8 @@
   "587712ff52b1b20eebc1ca0c8e03329f8f55f870b05ebd87bc102bae637dd4f5": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "58996abccb9357c0be01f7b6ac6cc71ae108fd9e03856838f90616825d66d0fa": {
     "consecutive_down": 0,
@@ -4082,8 +4082,8 @@
   "596e2a490e9c3f10adbef98e96b9bc9e985f6bb52c4663017bf0784d9fc890d8": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "599ab7d773065036c7f9cfad8e24dc69b1f5ee4e06a87d59f75caf29caaca6fa": {
     "consecutive_down": 0,
@@ -4238,8 +4238,8 @@
   "5b8834004437c378d4c1ffab9ccf98b58753715f9cb859ca29908af52ea0f34e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: TimeoutError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "5b8a3f5959979c36cfb44e1ff99220742d373994cb746bf25f5cc3d5807f1255": {
     "consecutive_down": 0,
@@ -4256,8 +4256,8 @@
   "5c1a0e27d36ae73a1f7db417bbfb0837ab4f2fd676439f8844425cf3d20fa1cf": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "5c1c840bed8285e3acc0e6f3d79c407f245d1a7d90798252185ce0f6e328432a": {
     "consecutive_down": 0,
@@ -4316,8 +4316,8 @@
   "5cdea783add4ac839625e520a465868f63e842c999ce099d28003b86c1179c1f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "5d4880e5a23ee5d17d8deab19314d404ec444f3604450bffe4e205b9bd311fd5": {
     "consecutive_down": 0,
@@ -4370,8 +4370,8 @@
   "5ebdc6a63657a2d009a1f3db30a07776114cfd9c984c60f551c161379b218efb": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: TimeoutError",
+    "state": "unknown"
   },
   "5ed1d6ce6d32a0d6d2bfa47371c93d710cfbae9ca09da793a87d3d01e7782e28": {
     "consecutive_down": 0,
@@ -4382,8 +4382,8 @@
   "5f2d741f2cd831912c6ef650f080f9b00daa5b162635023f0e342ffebe433b52": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "5f49faadf7be196e57b70a0003f4f721a83f015e7c1a01bda52055cd0e2d6233": {
     "consecutive_down": 0,
@@ -4536,10 +4536,10 @@
     "state": "up"
   },
   "62ec9d79e8e05dee1a75123c8f5d86a0394860f266837f27f9eeea413ed56ca3": {
-    "consecutive_down": 1,
+    "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "630ca5fc2bf4dca427865d4ae821bf8e24c3c9a7499b00376eea5a30a1311de9": {
     "consecutive_down": 0,
@@ -4688,8 +4688,8 @@
   "67cab02251b91e98d48104b77cdca2f16923a238703a0f9b19f642989ff2946d": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "67d7f51c6c13973fa466c41f7d1c6ac4ea7fab78131839b0460397ec29d75eff": {
     "consecutive_down": 0,
@@ -4916,8 +4916,8 @@
   "6cad2b9ec23e236f4df96e4382f8f27b17f202bf2022d2c1f807672cd5dc1f2a": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "6caf59bd5474c2020c2a66481af6767fa6dc4ac6537833dbadd30e309aa06a21": {
     "consecutive_down": 0,
@@ -4946,8 +4946,8 @@
   "6cf937ec60ea376ef739fed32751066149f9d831ba59d3c17a97c499494a5d6e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "6d23ae25150588e82def04ebdc5bb5ca628e060a5184469ad56b63fc8c4926a3": {
     "consecutive_down": 0,
@@ -5018,8 +5018,8 @@
   "6e78a8c661480732d2886bf600b3926b833d6dc7bca73c8c99f3cbf54a05534f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "6ea9e12660207186cb9a5a5728a586beebac05e46ab7bb11ede249a00dbf51e3": {
     "consecutive_down": 0,
@@ -5042,7 +5042,7 @@
   "6ef3620a23692d0283948f0017d8510deb54a12516f5822c88944f3078cf73e8": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 403 (posible bloqueo o fallo temporal)",
+    "reason": "Sin respuesta concluyente: URLError",
     "state": "unknown"
   },
   "6f08518aad2667fa6f02f80c2a66ccc7a2a796e3bf19a91d89614b9d8148401b": {
@@ -5066,8 +5066,8 @@
   "6fae97acfd28271dc2541423274e0b6acd1ede50b1fe953e709b960c0579148a": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "6fc01b45094182a1b9b289855752ad78a300de597336e81039ffaf617da7a7ab": {
     "consecutive_down": 0,
@@ -5078,8 +5078,8 @@
   "6fcf02cf0ec5b41ceaa459fa9c9346a064cdaa010e048edc7ad23733142e5ece": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 403 (posible bloqueo o fallo temporal)",
+    "state": "unknown"
   },
   "6fe606a7b35bc0a380250723a1c2f8247ad6860abe5231244df35c783f068a86": {
     "consecutive_down": 0,
@@ -5096,8 +5096,8 @@
   "700615af7dd80298d2182a3c2533c2c19100ea01168db761d44fb98577e61674": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "701105fba407e2265ca790a1373416c2c3bdf8848d92e04bc47d3dfaa6d9aaf0": {
     "consecutive_down": 0,
@@ -5408,8 +5408,8 @@
   "765c04696eec5cb939d3366028413641d24581a25ca1afb52cf5269e88f07022": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "766b111f95937f2206435d9374f6ed583a2ba559fc92f506eb021a48af7a6ca0": {
     "consecutive_down": 0,
@@ -5636,8 +5636,8 @@
   "7b8e92bf8342be65843ba82c81b230dd5ac5107ccab3772389c6292f92fa8f87": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: TimeoutError",
+    "state": "unknown"
   },
   "7b9444506791cb9fe3846add9e0b347f27b5254dcb435f34dc7d630dfb32216d": {
     "consecutive_down": 0,
@@ -5690,8 +5690,8 @@
   "7ca0784aef472172a3a2669d4c5fd7edf65e0d680d4be8c97c199fa2908addff": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "7cd01c0c02b27b396ca7c0a7e3612758ab3a189962c818cbd1d2cd8076d8e714": {
     "consecutive_down": 0,
@@ -5778,10 +5778,10 @@
     "state": "up"
   },
   "7ec909048ee8e3890967fc897b0c679c68f2d5677d370a76a04defaa3e1e5f2d": {
-    "consecutive_down": 1,
+    "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "7eceed8173d88a5cfdb7a2d48a9353b11d23b481bb9edfd36cfe24f1cf6c3e12": {
     "consecutive_down": 0,
@@ -5816,8 +5816,8 @@
   "7fdb187ec211f16216190bd869117303fb9c92f1ac91316bfc58e773e9a735fb": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "7ff39023f5e6d3146f892eae4c18de09e5d027e8b85a36ae706e69687554946f": {
     "consecutive_down": 0,
@@ -5996,8 +5996,8 @@
   "83999b1172ac024ab9e9dc6e0eb061003830c1267787c7957e0c542c6911a393": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "83aa650d6a260276fb7c3325505873605a2cd077257e395289762895ec3da47e": {
     "consecutive_down": 0,
@@ -6396,10 +6396,10 @@
     "state": "up"
   },
   "8c972a861d4132cb8ac278b4e4ee09346fb50649ed9bbbc74a340922c6de88ba": {
-    "consecutive_down": 1,
+    "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "8caf0ef265cf695b070a1a4dce52a883b5c8b9ba1bf4ea87475b0fa7a752fe0f": {
     "consecutive_down": 0,
@@ -6440,8 +6440,8 @@
   "8d53402b2ae7b504328a9fa9a89fdd3b0d1b928eff636e346cab332656bd3b0e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "8d5904ef2ab358f38772749ea02e7cd7a5379d208c128aa5b276b35c52d00b3a": {
     "consecutive_down": 0,
@@ -6512,8 +6512,8 @@
   "8e82d02c46dcdc6a34806d5edfc8401e6a467d5a90a3f5e72cb2c5f0c1bcc3b5": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin datos del manifiesto/segmento (200)",
+    "state": "unknown"
   },
   "8ed2e0fa24e49fb6091890560455b1f4541eccc6f30d60d8363fad48549059b2": {
     "consecutive_down": 0,
@@ -6608,8 +6608,8 @@
   "903a94e486cc98be38ec1e7453dd8e689da17eea7fb44452616f7bcae674ffd3": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "9051e1361fcb2ee4b75ddf352c0200fe468f93f742a72e5f08a681abbf671203": {
     "consecutive_down": 0,
@@ -6698,8 +6698,8 @@
   "923a4e337bfa43b50f93b56d3c9334c122242e49c61e61ea7352c174aa2da77d": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "923e966d724fa2a73124cae949412cee85b3cf783801f87dafe0ee5a17e8a65e": {
     "consecutive_down": 0,
@@ -6842,8 +6842,8 @@
   "945df91a0df765e447b6db2529c971831c141756026a0b5d7960e8f41e9aeefe": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "94889d5b47b131152a0e91165e1c6b56bd0ca03b6622f16b93b89500bfa20bf8": {
     "consecutive_down": 1,
@@ -6854,8 +6854,8 @@
   "94a3a8a8140464b168a5c4e056cfed4983dee1290b82e1bd015917095331a2d5": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "95030668475abe696fdcd39f31019708868cb79bee12c3dcf524067bb5f464d0": {
     "consecutive_down": 0,
@@ -6866,8 +6866,8 @@
   "9532a5b59f9ecbeae836c4e1b2d9874d2ba0b07a4f15647b90a2b0bbb369b3a6": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "9542895676885a03ad7cd53dab11b9a042e7d95d649bf33c1d0aaf5434793298": {
     "consecutive_down": 0,
@@ -7430,8 +7430,8 @@
   "a104c433def37a4fd9cb07331209b97f6503061c8b464241b67e7eb5a5c9d3d1": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "a12291654ab5ab49b29ad466cfce54c70b108409b342554ba0ccc573cef61bd4": {
     "consecutive_down": 0,
@@ -7496,8 +7496,8 @@
   "a23efae15dc6a2790b168229bd8eaa601a166154d6cc1dfd6fad2b23eead56b1": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "a2409367e7d431b0087b590007145e5f0125d45c8cb3dfeb61e1e349e1e5b602": {
     "consecutive_down": 0,
@@ -7598,8 +7598,8 @@
   "a599fe66c0189b472d5d8b75c2536e04cc76e91519ea37cb019e7cd6ebe6ad88": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "a5b24988db31a9595f0b5b216456851d0d22bdd8217236ea6ee200f2dab2d62a": {
     "consecutive_down": 0,
@@ -7658,8 +7658,8 @@
   "a668a7c1f91001674c01dcfe797363fc08b8331aa389f49c6060e6d2f74a8f75": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "a66a7a3ccb4dbb205181aaf5ef94cfb3f44e801e80e77e2b1033ab373c3d8cb0": {
     "consecutive_down": 0,
@@ -7952,8 +7952,8 @@
   "af516affa399620c3c637c0a5fdb795a1052ad7faea4d6dd1c5b30dc228b1e5f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "af79236198dd6e6d298a35e368a00024978fa60f2a45fd58c4cf0372fda595d1": {
     "consecutive_down": 0,
@@ -8330,8 +8330,8 @@
   "b701f5c97e5a75b7d3a39ce0bea3d25d1dd4dafb4a1810cf4a8f86d0b26b074b": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "b7322673dada613ae7dcb17693297cba7d785b7f46c42a0dc2ae5bd427411cbd": {
     "consecutive_down": 0,
@@ -8388,10 +8388,10 @@
     "state": "unknown"
   },
   "b8a758f56c9423559a2a04068277e604cd40a02592c97254c560940d9a4b52a2": {
-    "consecutive_down": 1,
+    "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "b8bc04126ef2e0c6161fa406f4764292d4663c31852cc95e14f72d05edf88b1b": {
     "consecutive_down": 0,
@@ -8780,8 +8780,8 @@
   "c08409443f166216dcb6106e153f7adf7316eed72af232467582fbf8b88987fa": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "c0a0b9b5daaa3c336766954ae92491d174f067edfc243856fd50c74e2d3f027a": {
     "consecutive_down": 0,
@@ -8828,8 +8828,8 @@
   "c1bc1702a7a7544fbb7fb4066fb2322d6dd7381c1f85beda74437bd76fb6a2b1": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "c1de7d487e59ffbea1f169de74ac88bee8b165e04db95d02e6896dbfbff5a84b": {
     "consecutive_down": 0,
@@ -8888,8 +8888,8 @@
   "c385e431f9a8415c6aefd02792153fe792e7c0c9e8ed3f62c8c91267163f59b3": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Formato de stream no reconocido",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "c398bb93f287b8438d272cd17dc624632ba673e6aceb855552e90fcf901d16b5": {
     "consecutive_down": 0,
@@ -9038,8 +9038,8 @@
   "c6bf93fc6cc7565ef8830a1dfe724481f89e099a6eaf2f413e9afd8a5580657f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: RemoteDisconnected",
+    "state": "unknown"
   },
   "c6edbc4dc6e311fd19d525bb11e2312a18c8f14cf86c10f9c71f3b1eb18b8066": {
     "consecutive_down": 0,
@@ -9248,14 +9248,14 @@
   "cb30aaa612f1aa6602472e7c335914e18d86203017c1dedc27a71adbc4e88331": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 403 (posible bloqueo o fallo temporal)",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "cb452578ff60fafa3a708997b1c818b9f721aa4e5eb1f7403430a317ebb67b78": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "cb58153d03374edf7b1272b8dc3f6bffdbcff57a81919d67250029aea2e96a65": {
     "consecutive_down": 0,
@@ -9434,7 +9434,7 @@
   "ceaa2dbd5282326b9a1522c03662c7fd657d4d6caabf7c34a392b4699947fd6e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: TimeoutError",
+    "reason": "Sin respuesta concluyente: RemoteDisconnected",
     "state": "unknown"
   },
   "cec9c47b6bbe793a6b9961bc16b57bf2e9977ffccfa96533878def1b6aebc357": {
@@ -9506,8 +9506,8 @@
   "d0127e2adf3d6a71de1d9c263c40a0c1a776e1545007d5c7ff6bbbcb03d4f497": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "d023e9d329e3d1481a347f193c7d50ea767b576e88200b52677f6bb5cd74abe8": {
     "consecutive_down": 0,
@@ -9722,8 +9722,8 @@
   "d420fcd6a9641275fa325f02e84584c8b8bb511928586123e64903e6cfb3100c": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "d42157c2d954f7013433dc00a655e55cd2367ac9aff506643d8127bac9cce6b5": {
     "consecutive_down": 0,
@@ -9836,8 +9836,8 @@
   "d616b60f90b4cc00913a754b7c89e1dd2c6ed1d01502583eacdd0a72c05506fd": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "Sin respuesta concluyente: URLError",
+    "state": "unknown"
   },
   "d6442978871c1fc550e00025e5e94eacc3dc8c38f04135cbb21d6d74388f2ee4": {
     "consecutive_down": 1,
@@ -9962,8 +9962,8 @@
   "d871eefe81f28ed35b8f0fd04c17113daa62404723f2a74a7e4eec77d1366bdd": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "d87987b44599d01bc8e6ee7f2e3560803e4dec24703912ad9dcd31f7d2a10746": {
     "consecutive_down": 0,
@@ -10058,8 +10058,8 @@
   "d9e0ff82403034e2bf363893c8942631be19762bc19e2318a961311f5ec3ec42": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "d9e20efcb466c6fd5ffe87ea4ecab536ffc82b485dd38b47be2922a8ad3bbbcf": {
     "consecutive_down": 0,
@@ -10124,8 +10124,8 @@
   "db9536d34e42745929ed5c0e06a59c4ed45dca912a02580662e5c53e21cfa58a": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "dba87101eeded3ab73fb4d658363559a96b1abc03e8ee1218d84bb784ab5cdd9": {
     "consecutive_down": 0,
@@ -10268,8 +10268,8 @@
   "de4c6706daff5d3ae41784ba105acded94839e05244dcc588d4c96b226ac9245": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "deb6ca46bceadb502b5a6588530de1a420b377f21612d9fa7a1236bc43b76039": {
     "consecutive_down": 0,
@@ -10394,8 +10394,8 @@
   "e0802525402da3e0df7b4774c48c71aee5e6fe91aaff03582401908d39435ef0": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "e0adc7f6f94e5a0ddef389808156465d3a6b0de8e6b0b2691d0fda9f782f3530": {
     "consecutive_down": 1,
@@ -10454,8 +10454,8 @@
   "e1ef43fd995a79154373efff60ba16285034c2593f3463856f18817370469956": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "e2251908a02932a9e0da398be1c4c72f8628dff8221341cc7fc4b58cecd7c73b": {
     "consecutive_down": 0,
@@ -10586,8 +10586,8 @@
   "e466909f253760bda298d128297a2b9e7c6cf2f7ffb35c758b24c5503d6fb0b6": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "e476e602c98b15dff0943d1e26ecacb6832a20494175081ea543e3ff158b0255": {
     "consecutive_down": 0,
@@ -10616,14 +10616,14 @@
   "e499998345f8445ac545021d0a86efb5b558568d3bc8bf5bda6736123507d0ca": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "e4aa1f984913367d185868feefad0dac0c909393f4e6d79dcfd1ade341eb8dad": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "HTTP 404",
-    "state": "down"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "e4c4326cfc8e15056e545b7f2942643203c74cadb2f08bea6437d8828675a5fd": {
     "consecutive_down": 0,
@@ -10946,8 +10946,8 @@
   "eb5f286ba8c3441de451abe8beeefc84f8ef799038065b80964b7885e6c936ac": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "eb6e1db753d22f053b3849e0a1811086c9137df79cd71e8b32a98eba72bd6f1e": {
     "consecutive_down": 0,
@@ -11090,8 +11090,8 @@
   "ee855715ac7a5a352733c9afc052c5ec08e92a54d21d55a921f88bac8a479855": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "ee929d03e3178ec65ee5d453b63e859f90cc55b139305ab68ff8ac2b4a4a9c1c": {
     "consecutive_down": 0,
@@ -11108,8 +11108,8 @@
   "ef14ee6610f5f286be2fb9e6cb335f2fcdc79e63af0e72d6dfb90f32c5bb70aa": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "ef45707a8e90181811b44a316bfcd4e78a09d4a48801035df841b5359e5fa5b5": {
     "consecutive_down": 0,
@@ -11246,8 +11246,8 @@
   "f2421f3d03c4e6b18f5b0a9f1d4950a8fd6f6da5522443b5b62c6e9f6957be3f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "f2522a5a5d2e86dd4b9842620771f0f9ee1082553b65c08a0d751a8ca7d681a0": {
     "consecutive_down": 0,
@@ -11282,8 +11282,8 @@
   "f2c55b4b21b17dbf781a639d6f96637629cbb62c05e5ca2a91ebe49c993983a5": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "f2d4d17d9d9cdb509046ab22908fb842316fc372c7ad9878c0c4c60ad2d1a1ad": {
     "consecutive_down": 0,
@@ -11456,8 +11456,8 @@
   "f5c4a320ecb516b86a413a0589b381158084e4c60fda9256c04481d48fc111e6": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "f5e0b83472a4597c3d429185b09e603bdf8a8f1e4847da014b12836b2d9dd208": {
     "consecutive_down": 0,
@@ -11588,8 +11588,8 @@
   "f83a91185b045aa3c036add42ac5ec1791846c4e7842fce1cbd1374360f6a245": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: URLError",
-    "state": "unknown"
+    "reason": "Manifiesto y segmento accesibles",
+    "state": "up"
   },
   "f871ce736c0e1829c4e6b784c4a15a2177ddba9fce584d629b2a544f990515b5": {
     "consecutive_down": 0,
@@ -11678,8 +11678,8 @@
   "f9d76478561210c3ae35dc41e4e038a07dfd852445dc528fccc25befbab9f87f": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "f9f7afc110ccc54953aac1ad37eb1a01d3680d0481556853c5fe7a151c2eca33": {
     "consecutive_down": 0,
@@ -11720,8 +11720,8 @@
   "fa7f9d4efed1bef4650ec6d5d827e8710ab676a429c44d6743050aedc5d7ea2e": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "fab76ae89813e09056fff4f4c206c1f4a05f5abec132ec3019b7b80645a66d59": {
     "consecutive_down": 0,
@@ -11738,7 +11738,7 @@
   "fb14234582e22ef9c4ecf491a73a6c196874c718c0261ed2cdb82a55a6e834ec": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Sin respuesta concluyente: TimeoutError",
+    "reason": "Sin respuesta concluyente: RemoteDisconnected",
     "state": "unknown"
   },
   "fb3a9ef405238f2779b68c3d3579ca9f98a51ff9ea69c5e01ffebc5bf74e6719": {
@@ -11852,8 +11852,8 @@
   "fd08e4e8c778b98306a99b41523dfbaaed6ff668a777a1086b59217cb2252a75": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "fd1bd2ee2860658beaec54a1eaeaa2ce6fdb4033e162170b0c78308421a53bbf": {
     "consecutive_down": 0,
@@ -11876,8 +11876,8 @@
   "fd84f235b8b1a3a192e51426600c3bef554dc8ad04b6e2132635d609273fe3b9": {
     "consecutive_down": 0,
     "date": "2026-10-22",
-    "reason": "Manifiesto y segmento accesibles",
-    "state": "up"
+    "reason": "HTTP 404",
+    "state": "down"
   },
   "fd9bf3545734d77b8e8dbd2bc21242633edeb67a7815134199a155b04254a8af": {
     "consecutive_down": 0,

@@ -2,8 +2,8 @@
 
 Fecha UTC: 2026-10-22
 URLs únicas probadas: 2001
-Con segmento/manifiesto válido: 1480
-Fallo comprobado en esta pasada: 137
+Con segmento/manifiesto válido: 1459
+Fallo comprobado en esta pasada: 158
 Indeterminado (timeout, geobloqueo u otros): 384
 URLs con fallo reiterado confirmado: 0
 
@@ -12,8 +12,8 @@ Solamente se excluyen enlaces que fallan de forma concluyente en dos días de au
 
 ## Listas con comprobación positiva reciente
 
-- tv-verificada.m3u: 1979 entradas
-- 24-7-verificados.m3u: 160 entradas
+- tv-verificada.m3u: 1953 entradas
+- 24-7-verificados.m3u: 162 entradas
 - peliculas-verificadas.m3u: 67 entradas
 - series-verificadas.m3u: 46 entradas
 
@@ -21,7 +21,7 @@ Solamente se excluyen enlaces que fallan de forma concluyente en dos días de au
 
 | Lista | Total | Accesibles | Fallo claro | Indeterminados |
 |---|---:|---:|---:|---:|
-| 24-7.m3u | 254 | 160 | 20 | 74 |
+| 24-7.m3u | 254 | 162 | 19 | 73 |
 | peliculas.m3u | 90 | 67 | 9 | 14 |
 | series.m3u | 46 | 46 | 0 | 0 |
-| tv.m3u | 2001 | 1480 | 137 | 384 |
+| tv.m3u | 2001 | 1459 | 158 | 384 |
