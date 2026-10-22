@@ -78,3 +78,13 @@ Después de cada auditoría profunda, el proceso publica listas alternativas que
 - Series: `series-verificadas.m3u`
 
 Estas listas pueden ser más cortas: descartan tanto los enlaces caídos como aquellos sin confirmación (p. ej. geobloqueos). Las originales se conservan completas con eliminación conservadora por fallos persistentes. La comprobación positiva no garantiza continuidad de 24 horas ni acceso desde todos los países; el reporte registra la fecha de la última auditoría.
+
+## Búsqueda ampliada de los títulos solicitados
+
+También se sincronizan automáticamente las listas internacionales `index.m3u` de IPTV-ORG, `mx_pluto.m3u`, `es_pluto.m3u`, `us_pluto.m3u`, `uk_pluto.m3u`, `us_samsung.m3u` y `uk_samsung.m3u`, además de las fuentes anteriores. Esto permite encontrar canales FAST dedicados a un solo programa que no figuran en la lista hispanohablante.
+
+Se aceptan coincidencias **exactas** de identidad/título, no cadenas genéricas de películas, anime o dibujos animados. Algunos feeds provienen de España, México, Estados Unidos o Reino Unido; el audio español y el acceso en Ecuador no se infieren del nombre y deben comprobarse en el reproductor.
+
+Los resultados detallados de cada auditoría están en [REPORTE_MONOSERIE.md](REPORTE_MONOSERIE.md). Los títulos sin un canal publicado permanecen en [24-7-PENDIENTES.md](24-7-PENDIENTES.md). Sólo se publica en `24-7-verificados.m3u` lo que haya pasado una comprobación HLS positiva desde GitHub Actions.
+
+La lista completa puede contener canales geobloqueados. No se eluden DRM, tokens privados ni suscripciones de pago.
