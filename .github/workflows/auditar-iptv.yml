@@ -73,7 +73,7 @@ jobs:
             git add tv.m3u tv-verificada.m3u iptv-espanol/*.m3u
             git add iptv-espanol/ESTADISTICAS.txt iptv-espanol/24-7-PENDIENTES.md
             git add iptv-espanol/fuentes_estado.json
-            git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md
+            git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md iptv-espanol/REPORTE_MONOSERIE.md
             if git diff --cached --quiet; then
               echo "No hubo cambios de auditoría"
               exit 0
