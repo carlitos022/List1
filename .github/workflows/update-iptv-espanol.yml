@@ -1,23 +1,33 @@
-name: Actualizar IPTV español
+name: Sincronizar IPTV con fuentes originales
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 8 * * *"
+    # Cada tres horas, evitando el minuto 00 de mayor demanda.
+    - cron: "17 */3 * * *"
   push:
     branches: [main]
     paths:
       - "iptv-espanol/generar_listas.py"
+      - "iptv-espanol/sincronizar_fuentes.py"
+      - "iptv-espanol/filtrar_muertos.py"
+      - "iptv-espanol/dead_urls.txt"
+      - "iptv-espanol/test_sincronizar_fuentes.py"
       - ".github/workflows/update-iptv-espanol.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: iptv-sync-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout
+      - name: Obtener repositorio
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -25,13 +35,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generar listas
-        run: python iptv-espanol/generar_listas.py
+      - name: Ejecutar pruebas offline
+        run: python -m unittest discover -s iptv-espanol -p "test_*.py" -v
 
-      - name: Filtrar streams muertos
-        run: python iptv-espanol/filtrar_muertos.py
+      - name: Verificar fuentes y actualizar solo si cambiaron
+        run: python iptv-espanol/sincronizar_fuentes.py ${{ github.event_name != 'schedule' && '--force' || '' }}
 
-      - name: Guardar cambios
+      - name: Publicar solamente cambios validos
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,11 +51,11 @@ jobs:
           git add iptv-espanol/ecuador.m3u
           git add iptv-espanol/espanol-paises-y-categorias.m3u
           git add iptv-espanol/ESTADISTICAS.txt
-          git add iptv-espanol/dead_urls.txt
+          git add iptv-espanol/fuentes_estado.json
           git add tv.m3u
           if git diff --cached --quiet; then
-            echo "Sin cambios"
+            echo "Fuentes sin novedades. No se publica ningun commit."
           else
-            git commit -m "Actualizar listas IPTV en español"
+            git commit -m "Sincronizar IPTV con fuentes oficiales"
             git push
           fi
