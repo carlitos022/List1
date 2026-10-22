@@ -7,7 +7,7 @@ import shutil
 import urllib.request
 from pathlib import Path
 from collections import Counter
-from canales_monoserie import CATALOGO, seleccionar
+from canales_monoserie import CATALOGO, seleccionar, identificar
 
 SOURCE = "https://iptv-org.github.io/iptv/languages/spa.m3u"
 EXTRA_CATEGORY_SOURCES = {
@@ -19,6 +19,17 @@ SHOW_SOURCE_URLS = {
     "kids.m3u": "https://iptv-org.github.io/iptv/categories/kids.m3u",
     "animation.m3u": "https://iptv-org.github.io/iptv/categories/animation.m3u",
     "comedy.m3u": "https://iptv-org.github.io/iptv/categories/comedy.m3u",
+}
+# Búsqueda internacional del título exacto, no cadenas genéricas de dibujos.
+# Los country_pluto publican feeds FAST dedicados que faltan en spa.m3u.
+MONOSERIE_SOURCE_URLS = {
+    "index.m3u": "https://iptv-org.github.io/iptv/index.m3u",
+    "mx_pluto.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx_pluto.m3u",
+    "es_pluto.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es_pluto.m3u",
+    "us_pluto.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u",
+    "uk_pluto.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_pluto.m3u",
+    "us_samsung.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_samsung.m3u",
+    "uk_samsung.m3u": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_samsung.m3u",
 }
 EXTRA_24_7_IDS = {
     "PELICULAS": {
@@ -108,7 +119,7 @@ def download_url(url: str) -> str:
     # Reutilizar exactamente las fuentes verificadas por sincronizar_fuentes.py.
     source_dir = os.environ.get("IPTV_SOURCE_DIR")
     if source_dir:
-        allowed = {SOURCE, FREE_TV_SOURCE, *EXTRA_CATEGORY_SOURCES.values(), *SHOW_SOURCE_URLS.values()}
+        allowed = {SOURCE, FREE_TV_SOURCE, *EXTRA_CATEGORY_SOURCES.values(), *SHOW_SOURCE_URLS.values(), *MONOSERIE_SOURCE_URLS.values()}
         if url not in allowed:
             raise ValueError(f"Fuente IPTV no autorizada: {url}")
         return (Path(source_dir) / url.rsplit("/", 1)[-1]).read_text(encoding="utf-8")
@@ -379,7 +390,9 @@ def main():
         extra_categories[group] = distinct([e for e in category_entries if is_spanish(e)])
         print(f"Categoría {group}: {len(extra_categories[group])} señales españolas elegibles")
 
-    free_tv = distinct([e for e in parse_entries(download_url(FREE_TV_SOURCE)) if is_spanish(e)])
+    # Free-TV también contiene canales monoserie internacionales, incluidos
+    # canales públicos FAST cuya versión española puede no estar disponible.
+    free_tv = distinct(parse_entries(download_url(FREE_TV_SOURCE)))
     # Hay que identificar el contenido real: una emisora general, aunque emita
     # las 24 horas, NO es una señal dedicada a un único programa.
     fuentes_tematicas = []
@@ -387,9 +400,17 @@ def main():
         fuentes_tematicas.extend(
             e for e in parse_entries(download_url(url)) if is_spanish(e)
         )
+    hallazgos_internacionales = []
+    for source_name, source_url in MONOSERIE_SOURCE_URLS.items():
+        fuente = parse_entries(download_url(source_url))
+        elegibles = [e for e in fuente if identificar(e) and is_stream(e)]
+        for e in elegibles:
+            e["fuente_monoserie"] = source_name
+        hallazgos_internacionales.extend(elegibles)
+        print(f"Fuente mundial {source_name}: {len(elegibles)} candidatos monoserie de {len(fuente)}", flush=True)
     tv_247 = seleccionar(distinct(
         entries + extra_categories["PELICULAS"] + extra_categories["SERIES"]
-        + free_tv + fuentes_tematicas
+        + free_tv + fuentes_tematicas + hallazgos_internacionales
     ))
     peliculas = extra_categories["PELICULAS"]
     series = extra_categories["SERIES"]
@@ -426,6 +447,7 @@ def main():
         + f"Películas adicionales: {len(peliculas)}\n"
         + f"Series adicionales: {len(series)}\n"
         + f"Canales monoserie 24/7 identificados: {len(tv_247)}\n"
+        + f"Hallazgos internacionales de series: {len(hallazgos_internacionales)}\n"
         + f"Canales Free-TV en español: {len(free_tv)}\n\n"
         + "\n".join(f"{k}: {v}" for k, v in stats.most_common())
         + "\n",
