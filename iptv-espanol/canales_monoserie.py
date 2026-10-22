@@ -58,7 +58,7 @@ CATALOGO = {
     "Naruto": ("Anime", ("Naruto", "NarutoShippuden")),
     "One Piece": ("Anime", ("OnePiece",)),
     "Detective Conan": ("Anime", ("DetectiveConan",)),
-    "Los Caballeros del Zodiaco": ("Anime", ("SaintSeiya", "CaballerosdelZodiaco")),
+    "Los Caballeros del Zodiaco": ("Anime", ("SaintSeiya", "CaballerosdelZodiaco", "LosCaballerosdelZodiaco")),
     "Death Note": ("Anime", ("DeathNote",)),
     "Futurama": ("Animación adulta", ("Futurama",)),
     "Los Simpson": ("Animación adulta", ("TheSimpsons", "LosSimpson", "LosSimpsons")),
