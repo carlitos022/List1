@@ -54,6 +54,8 @@ class SincronizacionTests(unittest.TestCase):
                 generador.EXTRA_CATEGORY_SOURCES["SERIES"]: lista(12, "es"),
                 generador.FREE_TV_SOURCE: lista(110, "ar"),
                 **{url: lista(12, "es") for url in generador.SHOW_SOURCE_URLS.values()},
+                **{url: lista(2600 if key == "index.m3u" else 30, "us")
+                   for key, url in generador.MONOSERIE_SOURCE_URLS.items()},
             }
             salidas = {
                 nombre: ((root / nombre) if nombre == "tv.m3u" else (target / nombre), minimo)
@@ -73,6 +75,7 @@ class SincronizacionTests(unittest.TestCase):
                 self.assertGreaterEqual(len(generador.parse_entries(primero.decode())), 600)
                 mono = (target / "24-7.m3u").read_text(encoding="utf-8")
                 self.assertIn("Bob Esponja 24/7", mono)
+                self.assertIn("24/7 • Infancia", mono)
                 self.assertNotIn("Canal 42", mono)
                 self.assertTrue((target / "peliculas.m3u").is_file())
                 self.assertTrue((target / "series.m3u").is_file())
