@@ -13,6 +13,7 @@ EXTRA_CATEGORY_SOURCES = {
     "PELICULAS": "https://iptv-org.github.io/iptv/categories/movies.m3u",
     "SERIES": "https://iptv-org.github.io/iptv/categories/series.m3u",
 }
+FREE_TV_SOURCE = "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
 EXTRA_24_7_IDS = {
     "PELICULAS": {
         "CineRomantico.us@SD",
@@ -101,7 +102,7 @@ def download_url(url: str) -> str:
     # Reutilizar exactamente las fuentes verificadas por sincronizar_fuentes.py.
     source_dir = os.environ.get("IPTV_SOURCE_DIR")
     if source_dir:
-        allowed = {SOURCE, *EXTRA_CATEGORY_SOURCES.values()}
+        allowed = {SOURCE, FREE_TV_SOURCE, *EXTRA_CATEGORY_SOURCES.values()}
         if url not in allowed:
             raise ValueError(f"Fuente IPTV no autorizada: {url}")
         return (Path(source_dir) / url.rsplit("/", 1)[-1]).read_text(encoding="utf-8")
@@ -132,8 +133,9 @@ def parse_entries(text: str):
         url = lines[i].strip()
         attrs = dict(ATTR_RE.findall(extinf))
         tvg_id = attrs.get("tvg-id", "")
-        m = re.search(r'\.([a-zA-Z]{2})@', tvg_id)
-        cc = m.group(1).lower() if m else ""
+        m = re.search(r'\.([a-zA-Z]{2})(?:@|$)', tvg_id)
+        country = attrs.get("tvg-country", "").split(";", 1)[0].strip().lower()
+        cc = country if len(country) == 2 else (m.group(1).lower() if m else "")
         original_group = attrs.get("group-title", "General").strip() or "General"
         cat = CATEGORY_LABELS.get(original_group.lower(), f"📁 {original_group}")
         name = extinf.split(",", 1)[1].strip() if "," in extinf else tvg_id or url
@@ -261,6 +263,66 @@ def write_special_playlist(path: Path, entries, extra_categories=None):
     path.write_text("\n".join(out) + "\n", encoding="utf-8")
     return len(locals_), len(thematic), extra_count
 
+# Incluir solo canales regionales o con pista explícita de audio español.
+SPANISH_CODES = set(LATAM_CODES) | {"es"}
+SPANISH_VARIANT = re.compile(r'@(ES|SPA|LATAM|LATINO|MX)(?:$|[^A-Za-z])', re.I)
+DAYLONG_PATTERN = re.compile(r'(?<!\d)(?:24\s*[/\-]?\s*7|24\s*h(?:oras?)?|non\s*stop)(?!\w)', re.I)
+
+
+def is_spanish(e):
+    return (
+        e["cc"] in SPANISH_CODES
+        or bool(SPANISH_VARIANT.search(e["tvg_id"]))
+        or e["tvg_id"] in EXTRA_24_7_IDS["PELICULAS"]
+        or e["tvg_id"] in EXTRA_24_7_IDS["SERIES"]
+    )
+
+
+def is_stream(e):
+    """Para M3U de reproductores: excluir páginas web de YouTube/Twitch."""
+    from urllib.parse import urlsplit
+    u = urlsplit(e["url"])
+    if u.scheme not in ("http", "https") or not u.netloc:
+        return False
+    hostname = (u.hostname or "").lower()
+    if hostname in ("youtube.com", "www.youtube.com", "youtu.be",
+                    "www.twitch.tv", "twitch.tv", "facebook.com", "www.facebook.com"):
+        return False
+    return True
+
+
+def distinct(entries):
+    """Dedupe within a group, retaining metadata and the first feed."""
+    seen = set()
+    out = []
+    for e in entries:
+        key = e["url"].split("#", 1)[0].strip()
+        if key and key not in seen and is_stream(e) and "[Not 24/7]" not in e["name"]:
+            seen.add(key)
+            out.append(e)
+    return out
+
+
+def write_group(path, entries, name):
+    lines = ["#EXTM3U"]
+    for e in entries:
+        lines.append(replace_group(e["extinf"], name))
+        lines.extend(e["extras"])
+        lines.append(e["url"])
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def append_group(path, entries, name):
+    if not entries:
+        return
+    with path.open("a", encoding="utf-8") as f:
+        for e in entries:
+            f.write(replace_group(e["extinf"], name) + "\n")
+            for extra in e["extras"]:
+                f.write(extra + "\n")
+            f.write(e["url"] + "\n")
+
+
 def main():
     entries = parse_entries(download())
 
@@ -283,19 +345,31 @@ def main():
     extra_categories = {}
     for group, url in EXTRA_CATEGORY_SOURCES.items():
         category_entries = parse_entries(download_url(url))
-        allowed_ids = EXTRA_24_7_IDS[group]
-        extra_categories[group] = [
-            e for e in category_entries
-            if e["tvg_id"] in allowed_ids
-            and "[Not 24/7]" not in e["name"]
-        ]
+        extra_categories[group] = distinct([e for e in category_entries if is_spanish(e)])
+        print(f"Categoría {group}: {len(extra_categories[group])} señales españolas elegibles")
+
+    # Fuente curada de TV abierta; su inclusión no implica prueba de continuidad.
+    free_tv = distinct([e for e in parse_entries(download_url(FREE_TV_SOURCE)) if is_spanish(e)])
+    candidates_247 = (
+        extra_categories["PELICULAS"]
+        + extra_categories["SERIES"]
+        + [e for e in entries if DAYLONG_PATTERN.search(e["name"]) and is_spanish(e)]
+        + free_tv
+    )
+    tv_247 = sorted(distinct(candidates_247), key=lambda e: e["name"].casefold())
+    peliculas = extra_categories["PELICULAS"]
+    series = extra_categories["SERIES"]
+    write_group(OUTDIR / "24-7.m3u", tv_247, "📡 24/7")
+    write_group(OUTDIR / "peliculas.m3u", peliculas, "🎬 PELICULAS 24/7")
+    write_group(OUTDIR / "series.m3u", series, "📺 SERIES 24/7")
 
     special_path = OUTDIR / "espanol-paises-y-categorias.m3u"
     local_count, thematic_count, extra_count = write_special_playlist(
         special_path, entries, extra_categories
     )
 
-    # tv.m3u es siempre un espejo de la lista especial usada en Smart TV.
+    # Categoría extra conservando todas las existentes.
+    append_group(special_path, tv_247, "📡 24/7")
     shutil.copyfile(special_path, ROOT / "tv.m3u")
 
     stats = Counter(country_label(e["cc"]) for e in entries)
@@ -304,14 +378,20 @@ def main():
         + f"Canales procesados: {len(entries)}\n"
         + f"Entradas locales lista TV: {local_count}\n"
         + f"Entradas tematicas lista TV: {thematic_count}\n"
-        + f"Canales extra 24/7: {extra_count}\n\n"
+        + f"Señales temáticas adicionales: {extra_count}\n"
+        + f"Películas adicionales: {len(peliculas)}\n"
+        + f"Series adicionales: {len(series)}\n"
+        + f"Señales 24/7 candidatas: {len(tv_247)}\n"
+        + f"Canales Free-TV en español: {len(free_tv)}\n\n"
         + "\n".join(f"{k}: {v}" for k, v in stats.most_common())
         + "\n",
         encoding="utf-8",
     )
     print(
         f"Generadas listas con {len(entries)} canales; "
-        f"Ecuador: {len(ecuador)}; TV: {local_count + thematic_count + extra_count} entradas"
+        f"Ecuador: {len(ecuador)}; 24/7: {len(tv_247)}; "
+        f"películas: {len(peliculas)}; series: {len(series)}; "
+        f"TV: {local_count + thematic_count + extra_count + len(tv_247)} entradas"
     )
 
 if __name__ == "__main__":
