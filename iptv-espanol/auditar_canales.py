@@ -25,6 +25,7 @@ DIR = Path(__file__).resolve().parent
 ROOT = DIR.parent
 STATE = DIR / "salud_canales.json"
 REPORT = DIR / "REPORTE_SALUD.md"
+SHOW_REPORT = DIR / "REPORTE_MONOSERIE.md"
 PLAYLISTS = [ROOT / "tv.m3u", DIR / "24-7.m3u",
              DIR / "peliculas.m3u", DIR / "series.m3u"]
 VERIFIED_PLAYLISTS = {
@@ -191,10 +192,13 @@ def update_record(old: dict, status: str, detail: str, day: str) -> dict:
     return record
 
 
-def load_urls() -> tuple[list[str], dict[str, set[str]]]:
+def load_urls(only: str | None = None) -> tuple[list[str], dict[str, set[str]]]:
     urls = set()
     groups: dict[str, set[str]] = {}
-    for path in PLAYLISTS:
+    paths = [p for p in PLAYLISTS if not only or p.name == only]
+    if not paths:
+        raise ValueError(f"Playlist no incluida en la auditoría: {only}")
+    for path in paths:
         if not path.exists():
             continue
         entries = parse_entries(path.read_text(encoding="utf-8"))
@@ -229,8 +233,8 @@ def write_verified_only(checked: dict[str, str]) -> dict[str, int]:
     return counts
 
 
-def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
-    urls, groups = load_urls()
+def audit(max_workers: int, timeout: float, limit: int = 0, only: str | None = None) -> dict:
+    urls, groups = load_urls(only)
     if limit > 0:
         urls = urls[:limit]
     if not urls:
@@ -260,7 +264,7 @@ def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
         "down": sum(verified.get(url) == "down" for url in group),
         "unknown": sum(verified.get(url) == "unknown" for url in group),
     } for name, group in groups.items()}
-    if not limit:
+    if not limit and not only:
         verified_counts = write_verified_only(verified)
         STATE.write_text(
             json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
@@ -291,6 +295,27 @@ def audit(max_workers: int, timeout: float, limit: int = 0) -> dict:
         for name, counts in sorted(per_group.items()):
             lines.append(f"| {name} | {counts['total']} | {counts['up']} | {counts['down']} | {counts['unknown']} |")
         REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        # Inventario por serie y región: la verificación HTTP puntual no
+        # certifica audio español, derechos regionales ni 24 horas al aire.
+        show_lines = [
+            "# Disponibilidad de canales monoserie",
+            "",
+            f"Auditoría UTC: {today}",
+            "",
+            "La clasificación temática viene de las fuentes oficiales/catálogo editorial.",
+            "La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.",
+            "",
+            "| Categoría | Serie / señal | ID de origen | Estado HLS |",
+            "|---|---|---|---|",
+        ]
+        if (DIR / "24-7.m3u").exists():
+            for entry in parse_entries((DIR / "24-7.m3u").read_text(encoding="utf-8")):
+                name = entry["name"].replace("|", "/")
+                cat = entry["original_group"].replace("|", "/")
+                identifier = entry["tvg_id"].replace("|", "/")
+                status = verified.get(entry["url"], "unknown")
+                show_lines.append(f"| {cat} | {name} | {identifier} | {status} |")
+        SHOW_REPORT.write_text("\n".join(show_lines) + "\n", encoding="utf-8")
     print(json.dumps({"probados": len(urls), "up": results["up"],
                       "down": results["down"], "unknown": results["unknown"],
                       "exclusiones_confirmadas": confirmed}, ensure_ascii=False))
@@ -304,5 +329,7 @@ if __name__ == "__main__":
     parser.add_argument("--timeout", type=float, default=5.0)
     parser.add_argument("--limit", type=int, default=0,
                         help="Solo para auditorías parciales: sin modificar el estado")
+    parser.add_argument("--only", choices=["24-7.m3u", "peliculas.m3u", "series.m3u", "tv.m3u"], default=None,
+                        help="Comprobar una sola categoría sin alterar listas ni estado")
     opts = parser.parse_args()
-    audit(max(1, min(opts.workers, 48)), max(2.0, min(opts.timeout, 15.0)), opts.limit)
+    audit(max(1, min(opts.workers, 48)), max(2.0, min(opts.timeout, 15.0)), opts.limit, opts.only)

@@ -29,6 +29,7 @@ SOURCES = {
     "kids.m3u": (generador.SHOW_SOURCE_URLS["kids.m3u"], 10),
     "animation.m3u": (generador.SHOW_SOURCE_URLS["animation.m3u"], 10),
     "comedy.m3u": (generador.SHOW_SOURCE_URLS["comedy.m3u"], 10),
+    **{key: (url, 2000 if key == "index.m3u" else 20) for key, url in generador.MONOSERIE_SOURCE_URLS.items()},
 }
 OUTPUTS = {
     "tv.m3u": (ROOT / "tv.m3u", 500),
