@@ -115,8 +115,8 @@ def identificar(entry: dict) -> tuple[str, str] | None:
         return None
     name = entry.get("name", "").strip()
     name = re.sub(r"\s*[\(\[](?:\d{3,4}p|HD|SD|FHD|4K|LatAm|US|Spain|Germany)[\)\]]", "", name, flags=re.I)
-    name = re.sub(r"\\s+24\\s*/\\s*7$", "", name)
-    name = re.sub(r"\\s*\\[(?:Geo-blocked|Not 24/7)\\]$", "", name, flags=re.I)
+    name = re.sub(r"\s+24\s*/\s*7$", "", name)
+    name = re.sub(r"\s*\[(?:Geo-blocked|Not 24/7)\]$", "", name, flags=re.I)
     return INDEX.get(slug(name))
 
 
