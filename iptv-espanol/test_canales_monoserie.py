@@ -31,6 +31,28 @@ class MonoserieTests(unittest.TestCase):
                 self.assertIsNotNone(got)
                 self.assertEqual(got[0], expected)
 
+    def test_canales_especificos_pluto_por_pais(self):
+        cases = [
+            ("", "Dragon Ball Z", "Dragon Ball Z"),
+            ("", "Dragon Ball", "Dragon Ball"),
+            ("", "Death Note", "Death Note"),
+            ("", "Los Padrinos Mágicos", "Los padrinos mágicos"),
+            ("", "Los Pitufos", "Los Pitufos"),
+            ("", "Winx Club", "Winx Club"),
+            ("", "Los caballeros del Zodiaco", "Los Caballeros del Zodiaco"),
+            ("", "Pokémon en español", "Pokémon"),
+            ("PlutoTVPokemon.us@US", "Pokémon", "Pokémon"),
+            ("GarfieldandFriends.us@US", "Garfield and Friends", "Garfield y sus amigos"),
+            ("TheWalkingDeadenEspanol.us@SD", "The Walking Dead en español", "The Walking Dead"),
+            ("", "Qué Culpa Tiene Fatmagül", "¿Qué culpa tiene Fatmagül?"),
+            ("", "Pocoyo (1080p)", "Pocoyó"),
+        ]
+        for index, (identifier, nombre, titulo) in enumerate(cases):
+            with self.subTest(nombre=nombre):
+                result = mono.identificar(e(identifier, nombre, f"https://example.org/{index}.m3u8"))
+                self.assertIsNotNone(result)
+                self.assertEqual(result[0], titulo)
+
     def test_genericos_y_falsos_positivos_no_entran(self):
         denied = [
             ("CanalNoticias.es@SD", "24 horas"),
