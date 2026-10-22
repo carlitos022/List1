@@ -5,7 +5,7 @@ Entradas tematicas lista TV: 774
 Señales temáticas adicionales: 54
 Películas adicionales: 94
 Series adicionales: 48
-Señales 24/7 candidatas: 262
+Canales monoserie 24/7 identificados: 28
 Canales Free-TV en español: 122
 
 🌐 Otros en espanol: 453

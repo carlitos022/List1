@@ -1,0 +1,48 @@
+# Series 24/7 aún sin señal identificada en fuentes públicas
+
+Estas series NO se inventan ni se mezclan con canales de género. Se incorporarán automáticamente si aparece una fuente monoserie compatible.
+
+- Ben 10
+- Jimmy Neutron
+- Danny Phantom
+- Los padrinos mágicos
+- Pingu
+- Teletubbies
+- Peppa Pig
+- Pocoyó
+- Garfield y sus amigos
+- Coraje el perro cobarde
+- El laboratorio de Dexter
+- Scooby-Doo
+- Los Picapiedra
+- Los Supersónicos
+- Los Pitufos
+- Las aventuras de Bob el Constructor
+- Winx Club
+- Hora de Aventura
+- La Pantera Rosa
+- Dragon Ball Super
+- Dragon Ball Z
+- Dragon Ball GT
+- Dragon Ball
+- Pokémon
+- Digimon
+- Sailor Moon
+- Los Caballeros del Zodiaco
+- Death Note
+- Futurama
+- Los Simpson
+- Padre de familia
+- Los Vengadores
+- Batman: La serie animada
+- Smallville
+- The Walking Dead
+- Breaking Bad
+- Dr. House
+- Supernatural
+- Malcolm
+- Alf
+- El Príncipe del Rap
+- El secreto de Feriha
+- ¿Qué culpa tiene Fatmagül?
+- Rebelde
