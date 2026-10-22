@@ -110,7 +110,7 @@ def check_stream(url: str, timeout: float = 5) -> tuple[str, str]:
         if not data:
             return "down", "Respuesta vacía"
         head = data[:256].lstrip().lower()
-        if head.startswith((b"<!doctype html", b"<html")) or b"text/html" in ctype:
+        if head.startswith((b"<!doctype html", b"<html")) or "text/html" in ctype:
             return "down", "Página HTML en lugar de stream"
         body = data.decode("utf-8", errors="replace")
         if body.lstrip("\ufeff").startswith("#EXTM3U"):
@@ -131,13 +131,13 @@ def check_stream(url: str, timeout: float = 5) -> tuple[str, str]:
                     return "unknown", "Playlist anidada sin segmento"
                 segment_url = urllib.parse.urljoin(actual2, media_ref)
                 _, ctype3, bytes3, _ = get_sample(segment_url, timeout)
-                if bytes3 and b"text/html" not in ctype3 and not bytes3.lstrip().startswith(b"<html"):
+                if bytes3 and "text/html" not in ctype3 and not bytes3.lstrip().startswith(b"<html"):
                     return "up", "Manifiesto y segmento accesibles"
                 return "unknown", "Segmento vacío/no reproducible"
-            if b"text/html" in ctype2 or sample2.lstrip().lower().startswith(b"<html"):
+            if "text/html" in ctype2 or sample2.lstrip().lower().startswith(b"<html"):
                 return "unknown", "Variante devuelve HTML"
             return "up", "Manifiesto y segmento accesibles"
-        if b"video/" in ctype.encode() or b"audio/" in ctype.encode():
+        if "video/" in ctype or "audio/" in ctype:
             return "up", "Stream multimedia responde"
         if data[:1] == b"\x47" or data[:4] in (b"ftyp", b"\x1a\x45\xdf\xa3"):
             return "up", "Datos multimedia"
