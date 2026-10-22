@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
 import re
 import shutil
 import urllib.request
@@ -97,6 +98,13 @@ SPECIAL_CATEGORY_ORDER = [
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
 def download_url(url: str) -> str:
+    # Reutilizar exactamente las fuentes verificadas por sincronizar_fuentes.py.
+    source_dir = os.environ.get("IPTV_SOURCE_DIR")
+    if source_dir:
+        allowed = {SOURCE, *EXTRA_CATEGORY_SOURCES.values()}
+        if url not in allowed:
+            raise ValueError(f"Fuente IPTV no autorizada: {url}")
+        return (Path(source_dir) / url.rsplit("/", 1)[-1]).read_text(encoding="utf-8")
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read().decode("utf-8", "replace")
