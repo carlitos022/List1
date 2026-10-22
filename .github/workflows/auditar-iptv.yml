@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tv.m3u iptv-espanol/*.m3u iptv-espanol/ESTADISTICAS.txt
+          git add tv.m3u tv-verificada.m3u iptv-espanol/*.m3u iptv-espanol/ESTADISTICAS.txt
           git add iptv-espanol/fuentes_estado.json
           git add iptv-espanol/salud_canales.json iptv-espanol/REPORTE_SALUD.md
           if git diff --cached --quiet; then
