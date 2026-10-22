@@ -2,7 +2,11 @@ Fuente: https://iptv-org.github.io/iptv/languages/spa.m3u
 Canales procesados: 2407
 Entradas locales lista TV: 1954
 Entradas tematicas lista TV: 774
-Canales extra 24/7: 11
+Señales temáticas adicionales: 54
+Películas adicionales: 94
+Series adicionales: 48
+Señales 24/7 candidatas: 262
+Canales Free-TV en español: 122
 
 🌐 Otros en espanol: 453
 🇩🇴 Republica Dominicana: 250
