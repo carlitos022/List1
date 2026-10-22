@@ -1,6 +1,8 @@
 name: Sincronizar IPTV con fuentes originales
 
 on:
+  pull_request:
+    branches: [main]
   workflow_dispatch:
   schedule:
     # Cada tres horas, evitando el minuto 00 de mayor demanda.
@@ -42,6 +44,7 @@ jobs:
         run: python iptv-espanol/sincronizar_fuentes.py ${{ github.event_name != 'schedule' && '--force' || '' }}
 
       - name: Publicar solamente cambios validos
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
