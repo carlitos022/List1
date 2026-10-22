@@ -25,6 +25,7 @@ DIR = Path(__file__).resolve().parent
 ROOT = DIR.parent
 STATE = DIR / "salud_canales.json"
 REPORT = DIR / "REPORTE_SALUD.md"
+SHOW_REPORT = DIR / "REPORTE_MONOSERIE.md"
 PLAYLISTS = [ROOT / "tv.m3u", DIR / "24-7.m3u",
              DIR / "peliculas.m3u", DIR / "series.m3u"]
 VERIFIED_PLAYLISTS = {
@@ -294,6 +295,27 @@ def audit(max_workers: int, timeout: float, limit: int = 0, only: str | None = N
         for name, counts in sorted(per_group.items()):
             lines.append(f"| {name} | {counts['total']} | {counts['up']} | {counts['down']} | {counts['unknown']} |")
         REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        # Inventario por serie y región: la verificación HTTP puntual no
+        # certifica audio español, derechos regionales ni 24 horas al aire.
+        show_lines = [
+            "# Disponibilidad de canales monoserie",
+            "",
+            f"Auditoría UTC: {today}",
+            "",
+            "La clasificación temática viene de las fuentes oficiales/catálogo editorial.",
+            "La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.",
+            "",
+            "| Categoría | Serie / señal | ID de origen | Estado HLS |",
+            "|---|---|---|---|",
+        ]
+        if (DIR / "24-7.m3u").exists():
+            for entry in parse_entries((DIR / "24-7.m3u").read_text(encoding="utf-8")):
+                name = entry["name"].replace("|", "/")
+                cat = entry["original_group"].replace("|", "/")
+                identifier = entry["tvg_id"].replace("|", "/")
+                status = verified.get(entry["url"], "unknown")
+                show_lines.append(f"| {cat} | {name} | {identifier} | {status} |")
+        SHOW_REPORT.write_text("\n".join(show_lines) + "\n", encoding="utf-8")
     print(json.dumps({"probados": len(urls), "up": results["up"],
                       "down": results["down"], "unknown": results["unknown"],
                       "exclusiones_confirmadas": confirmed}, ensure_ascii=False))
