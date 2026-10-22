@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "fuentes": {
+    "spa.m3u": {
+      "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
+      "sha256": "b9d16a1db4f51f8d6eb139e745452c8326ec77a313d1bc22c8b6ddc1bfcb1203",
+      "entradas": 2407
+    },
+    "movies.m3u": {
+      "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
+      "sha256": "73c93720984b8d642083c38eb0357c8b38ae5531a9234484c41fc21740658e2a",
+      "entradas": 789
+    },
+    "series.m3u": {
+      "url": "https://iptv-org.github.io/iptv/categories/series.m3u",
+      "sha256": "a4b839aca1b0e045912b3f22694c410f5b7962b1faafc36c8032f761ab0aa996",
+      "entradas": 522
+    }
+  }
+}
