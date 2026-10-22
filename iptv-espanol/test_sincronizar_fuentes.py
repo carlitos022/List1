@@ -51,6 +51,7 @@ class SincronizacionTests(unittest.TestCase):
                 generador.SOURCE: espanol,
                 generador.EXTRA_CATEGORY_SOURCES["PELICULAS"]: lista(12, "es"),
                 generador.EXTRA_CATEGORY_SOURCES["SERIES"]: lista(12, "es"),
+                generador.FREE_TV_SOURCE: lista(110, "ar"),
             }
             salidas = {
                 nombre: ((root / nombre) if nombre == "tv.m3u" else (target / nombre), minimo)
@@ -68,6 +69,9 @@ class SincronizacionTests(unittest.TestCase):
                 estado = json.loads((target / "fuentes_estado.json").read_text())
                 self.assertEqual(estado["fuentes"]["spa.m3u"]["entradas"], 600)
                 self.assertGreaterEqual(len(generador.parse_entries(primero.decode())), 600)
+                self.assertTrue((target / "24-7.m3u").is_file())
+                self.assertTrue((target / "peliculas.m3u").is_file())
+                self.assertTrue((target / "series.m3u").is_file())
 
                 # Mismo hash: no vuelve a generar.
                 with patch.object(sync.subprocess, "run", side_effect=AssertionError("Se regenero sin cambios")):
