@@ -47,7 +47,7 @@ jobs:
       - name: Validar manifests y segmentos HLS
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            python iptv-espanol/auditar_canales.py --workers 16 --timeout 4 --limit 120
+            python iptv-espanol/auditar_canales.py --workers 24 --timeout 5 --only 24-7.m3u --limit 1000
           else
             python iptv-espanol/auditar_canales.py --workers 42 --timeout 4
           fi
