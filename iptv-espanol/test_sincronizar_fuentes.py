@@ -42,16 +42,18 @@ class SincronizacionTests(unittest.TestCase):
             root = Path(carpeta)
             target = root / "iptv-espanol"
             target.mkdir()
-            for nombre in ("generar_listas.py", "filtrar_muertos.py"):
+            for nombre in ("generar_listas.py", "filtrar_muertos.py", "canales_monoserie.py"):
                 shutil.copy2(Path(generador.__file__).parent / nombre, target / nombre)
             (target / "dead_urls.txt").write_text("", encoding="utf-8")
             # 600 canales, incluidos 20 de Ecuador. Simula fuentes validas.
             espanol = lista(580, "es") + "\n".join(lista(20, "ec").splitlines()[1:]) + "\n"
+            espanol = espanol.replace('Canal0.es@SD', 'BobEsponja.de@ES', 1).replace('Canal 0', 'Bob Esponja', 1)
             respuestas = {
                 generador.SOURCE: espanol,
                 generador.EXTRA_CATEGORY_SOURCES["PELICULAS"]: lista(12, "es"),
                 generador.EXTRA_CATEGORY_SOURCES["SERIES"]: lista(12, "es"),
                 generador.FREE_TV_SOURCE: lista(110, "ar"),
+                **{url: lista(12, "es") for url in generador.SHOW_SOURCE_URLS.values()},
             }
             salidas = {
                 nombre: ((root / nombre) if nombre == "tv.m3u" else (target / nombre), minimo)
@@ -69,7 +71,9 @@ class SincronizacionTests(unittest.TestCase):
                 estado = json.loads((target / "fuentes_estado.json").read_text())
                 self.assertEqual(estado["fuentes"]["spa.m3u"]["entradas"], 600)
                 self.assertGreaterEqual(len(generador.parse_entries(primero.decode())), 600)
-                self.assertTrue((target / "24-7.m3u").is_file())
+                mono = (target / "24-7.m3u").read_text(encoding="utf-8")
+                self.assertIn("Bob Esponja 24/7", mono)
+                self.assertNotIn("Canal 42", mono)
                 self.assertTrue((target / "peliculas.m3u").is_file())
                 self.assertTrue((target / "series.m3u").is_file())
 
