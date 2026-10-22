@@ -32,3 +32,26 @@ El archivo `dead_urls.txt` excluye enlaces previamente descartados. Estos enlace
 `https://raw.githubusercontent.com/carlitos022/List1/main/tv.m3u`
 
 Los streams pertenecen a sus proveedores originales. Algunos pueden dejar de funcionar, estar geobloqueados o no emitir 24/7.
+
+## Nueva oferta: 24/7, cine y series
+
+- **Canales lineales 24/7:** `24-7.m3u`, combina señales en español de las categorías Películas/Series de IPTV-ORG con canales de `Free-TV/IPTV` seleccionados por país o variante española.
+- **Películas:** `peliculas.m3u`, incorpora todos los candidatos en español de la fuente de películas, no solo los IDs manuales iniciales.
+- **Series:** `series.m3u`, incorpora todos los candidatos en español de la fuente de series.
+- **Lista combinada:** `../tv.m3u`, ahora con el grupo independiente `📡 24/7`.
+
+Fuentes adicionales: https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8 y los dos grupos temáticos de IPTV-ORG. Solo se enlazan streams públicos; no se alojan contenidos ni se garantiza acceso geográfico.
+
+**Importante:** la expresión "24/7" identifica señales lineales/candidatas a programación continua. Una auditoría puntual no puede demostrar 24 horas ininterrumpidas de reproducción. La categoría contiene señales de televisión en directo, no un catálogo de archivos de películas bajo demanda.
+
+## Auditoría de disponibilidad
+
+La acción [Auditar disponibilidad IPTV](../.github/workflows/auditar-iptv.yml) comprueba diariamente **todos los enlaces únicos publicados** desde la red de GitHub Actions. Descarga una pequeña muestra del manifiesto y, si es HLS, intenta consultar la variante y un segmento de vídeo. La prueba no garantiza que el canal funcione desde todos los países ni durante todo el día.
+
+- **Accesible:** respuesta multimedia, o segmento HLS accesible.
+- **Caído de forma concluyente:** HTTP 404/410, HTML o respuesta vacía; solo se excluye de las listas tras dos auditorías realizadas en días distintos.
+- **Indeterminado:** HTTP 403, geobloqueo, timeout, fallo temporal o formato que no pueda certificarse. No se borra automáticamente.
+
+Los resultados se conservan en `salud_canales.json` y en el resumen [REPORTE_SALUD.md](REPORTE_SALUD.md) (se genera en la primera auditoría completa). La lista manual `dead_urls.txt` sigue vigente. Todas las salidas y la URL habitual `tv.m3u` conservan sus rutas.
+
+**Frecuencia:** fuentes cada 3 horas y prueba profunda una vez al día. Para ejecutarla de inmediato: pestaña **Actions**, flujo **Auditar disponibilidad IPTV (HLS)**, botón **Run workflow**.
