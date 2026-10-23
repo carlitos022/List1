@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-10-22
+Auditoría UTC: 2026-10-23
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
@@ -58,12 +58,12 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.us@BR | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.us@LatAm | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.us@SD | up |
-| 📺 24/7 • Infancia | iCarly 24/7 | SuperiCarly.us@Italy | unknown |
+| 📺 24/7 • Infancia | iCarly 24/7 | SuperiCarly.us@Italy | up |
 | 📺 24/7 • Infancia | Kenan & Kel 24/7 | KenanKel.us@LatAm | up |
 | 📺 24/7 • Infancia | Kenan & Kel 24/7 | KenanKel.us@BR | up |
 | 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | LasTortugasNinja.us@LatAm | up |
 | 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | LasTortugasNinja.de@ES | up |
-| 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | TeenageMutantNinjaTurtles.de@IT | unknown |
+| 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | TeenageMutantNinjaTurtles.de@IT | up |
 | 📺 24/7 • Infancia | Los padrinos mágicos 24/7 |  | up |
 | 📺 24/7 • Infancia | Los Pitufos 24/7 |  | up |
 | 📺 24/7 • Infancia | Los Pitufos 24/7 |  | up |
