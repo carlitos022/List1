@@ -3,18 +3,18 @@
   "fuentes": {
     "spa.m3u": {
       "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
-      "sha256": "b9d16a1db4f51f8d6eb139e745452c8326ec77a313d1bc22c8b6ddc1bfcb1203",
-      "entradas": 2407
+      "sha256": "b4d68e4be2a53844ee8863960608396acd0dbe163d2c99cb0f367f1ba5ac1922",
+      "entradas": 2408
     },
     "movies.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
-      "sha256": "73c93720984b8d642083c38eb0357c8b38ae5531a9234484c41fc21740658e2a",
-      "entradas": 789
+      "sha256": "2bf4bceceed6b9dcdfc3f158d41e8871907110547bf121d65843849c9e83013b",
+      "entradas": 775
     },
     "series.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/series.m3u",
-      "sha256": "a4b839aca1b0e045912b3f22694c410f5b7962b1faafc36c8032f761ab0aa996",
-      "entradas": 522
+      "sha256": "c5dad022a5157edd9421fabfc09169adc0a5167d03c341fd4a28d080119ce62a",
+      "entradas": 518
     },
     "playlist.m3u8": {
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
@@ -23,52 +23,52 @@
     },
     "kids.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
-      "sha256": "29f231d75a29bed078044dffcc8c6aea0e6e5386a1a4ec7622cd0616914eaf9b",
-      "entradas": 431
+      "sha256": "61fed6fd1a24e5097714f885bfc8cbc6495618e812c547e4198a4fff55654eb0",
+      "entradas": 429
     },
     "animation.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
-      "sha256": "d2559334167537ba486c5a92779b693591b04889d9199da936994ce33e84d242",
-      "entradas": 174
+      "sha256": "1719ea9bcde3386bc82608cbb953f403e17c59c21334fe99214d121f79428403",
+      "entradas": 175
     },
     "comedy.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/comedy.m3u",
-      "sha256": "c7047b7e2bd6d126395eeea2434cce510c38bd5421b4134bfd4c64909a758897",
-      "entradas": 217
+      "sha256": "aaeca0e19c03f8011b5d91ede6de42ad24af72668250819306bd3702475f596b",
+      "entradas": 215
     },
     "index.m3u": {
       "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "sha256": "8abc5a8763d4029abec9434f037ca56d9a13982428e6a90611cc8316c92148ef",
-      "entradas": 11362
+      "sha256": "b44a33c19f3851274ff317540264deb3fafb9b5d9e52bd5c0681cef60daea638",
+      "entradas": 11302
     },
     "mx_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx_pluto.m3u",
-      "sha256": "613e353024c87db442f5f33ad77750c251d2fbcda2d0ecbf55cc2d7be8f9b5b1",
+      "sha256": "6a1af31d2e7c652bf7da5a154e50fc40d34dc20008ba061beb29a5de7253c934",
       "entradas": 193
     },
     "es_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es_pluto.m3u",
-      "sha256": "7b5d0cb321c4cf535a6f4c495fbdfbaf01a4561c61e3fbcdc65b4f7eb200b6c3",
+      "sha256": "8afe2192f3233f907db608b9ab4ec1244a2076d55a0221988248889edb00d2e8",
       "entradas": 137
     },
     "us_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_pluto.m3u",
-      "sha256": "c518dfb1d02e7e9dcd571f8e1369ad541893bafdc98ebef61c3ac8e6f72a1b7f",
+      "sha256": "2108c134a98cb600f58fa7f21092d32fdd928beaba8163d110ab4e0d7d2472b0",
       "entradas": 400
     },
     "uk_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_pluto.m3u",
-      "sha256": "0a10ab568058ead32e48ed24653b81bf426609d096e7b6fd92232c1ce2a85979",
+      "sha256": "3adeb199964c4d3a1e183bcad8e153ce4a505c2122c1011944608518dac036cf",
       "entradas": 185
     },
     "us_samsung.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us_samsung.m3u",
-      "sha256": "2b5c14884dbb458e285d482eb6ffcb270c4638197e9310f823b79f3bfc3cac75",
+      "sha256": "ce7c939cf98719b48706b0280fb65d92637504e23a6bc61e94d16f09de2ef3b8",
       "entradas": 407
     },
     "uk_samsung.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/uk_samsung.m3u",
-      "sha256": "affc3c66872bb09911ab15a1b1378934e35880280771529f8c127d1da4dc34e9",
+      "sha256": "1db7836e49e9f42439a8e1ee28b9e0a617e841f73072533eff61c8006d1626b1",
       "entradas": 176
     }
   }
