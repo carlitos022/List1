@@ -3,18 +3,18 @@
   "fuentes": {
     "spa.m3u": {
       "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
-      "sha256": "b4d68e4be2a53844ee8863960608396acd0dbe163d2c99cb0f367f1ba5ac1922",
-      "entradas": 2408
+      "sha256": "10c3e724fd329aa510e3f0b17a24faa20a365af46c6e512a63fab21e0db22dfc",
+      "entradas": 2414
     },
     "movies.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
-      "sha256": "2bf4bceceed6b9dcdfc3f158d41e8871907110547bf121d65843849c9e83013b",
+      "sha256": "706deda985ed3f308ce3d8e0f51e902522be996aff7b707ebf87b39588387199",
       "entradas": 775
     },
     "series.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/series.m3u",
-      "sha256": "c5dad022a5157edd9421fabfc09169adc0a5167d03c341fd4a28d080119ce62a",
-      "entradas": 518
+      "sha256": "aa6f8be86cf338378cf999ff079f6aef006ff6bdfaa150bdb132b3842d512c40",
+      "entradas": 517
     },
     "playlist.m3u8": {
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
@@ -23,8 +23,8 @@
     },
     "kids.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
-      "sha256": "61fed6fd1a24e5097714f885bfc8cbc6495618e812c547e4198a4fff55654eb0",
-      "entradas": 429
+      "sha256": "544a9fe8a591e583681bb8e14b50d7b8c234b11bad3a2674652b7042e0037da2",
+      "entradas": 430
     },
     "animation.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
@@ -38,8 +38,8 @@
     },
     "index.m3u": {
       "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "sha256": "b44a33c19f3851274ff317540264deb3fafb9b5d9e52bd5c0681cef60daea638",
-      "entradas": 11302
+      "sha256": "dcab9a7b462a3a35a5e92c88b1328a9a56f161d767a00b06cd659c57cb1fdfaa",
+      "entradas": 11323
     },
     "mx_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx_pluto.m3u",
