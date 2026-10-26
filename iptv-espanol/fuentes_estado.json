@@ -3,18 +3,18 @@
   "fuentes": {
     "spa.m3u": {
       "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
-      "sha256": "74d04f58b768798f4e927b05ef741b22f09bbd175577fe6f5b3d13bffbb42f0d",
+      "sha256": "0e4a97b5483ce24b524e8530a8494f2ce623a806e6beca86b59ad61d9b33ea9f",
       "entradas": 2414
     },
     "movies.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
-      "sha256": "1cc1aa6de0ad3e2c6cb74d407cc8741cad1420bfe2f7b4ccae0f90f66d07364e",
-      "entradas": 775
+      "sha256": "31214bb62a6270961a275efecfca106f455e41ea2112dc6e4ef63bcaeb225e8f",
+      "entradas": 776
     },
     "series.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/series.m3u",
-      "sha256": "866b70882fcb550821c0886ed89e1037a50d87196f0190666ad4b0028a2cb636",
-      "entradas": 517
+      "sha256": "1f69c41ee989232a4a06e9d7e53a24cafa164f9b3cf30af4475a7b7cc9232c07",
+      "entradas": 518
     },
     "playlist.m3u8": {
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
@@ -23,23 +23,23 @@
     },
     "kids.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
-      "sha256": "b849f998f7da2c9c926cc8d74d07b9fc372b687c68f0000e2cea73e530317f0e",
-      "entradas": 430
+      "sha256": "eb1bcec277016a230b9a31be23d5d5df290d36d9a3703c264cfe98f207700f39",
+      "entradas": 432
     },
     "animation.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
-      "sha256": "c430e08313906ae039e8fc66d1610fbe3aa049eeb94ff22ef8e56c21e478409c",
-      "entradas": 175
+      "sha256": "666aad1d5abd6d0ecea83612ee63a085e14f5d12fc43c5f6ed94e0e23baf9074",
+      "entradas": 176
     },
     "comedy.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/comedy.m3u",
-      "sha256": "8411be45a20f3e39262e05c85206758c6377f9774fa5846fa74964a5451e454c",
+      "sha256": "5ba4b85b5b0d789883b8d9cf1c007dcb2f5b5864325ee58c45e89c8b460b0c93",
       "entradas": 215
     },
     "index.m3u": {
       "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "sha256": "e25b6097fce3b8e1129209a10e4aca9640964864caef45cc55423f2b85b45197",
-      "entradas": 11333
+      "sha256": "a697c427035fd93392b8894d962aac84ee30befc778890acf5b49ca9f05a3a28",
+      "entradas": 11340
     },
     "mx_pluto.m3u": {
       "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx_pluto.m3u",
