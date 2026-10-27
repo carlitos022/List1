@@ -23,12 +23,12 @@
     },
     "kids.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
-      "sha256": "eb1bcec277016a230b9a31be23d5d5df290d36d9a3703c264cfe98f207700f39",
-      "entradas": 432
+      "sha256": "c456136496983b4460f25da332f8c515e23de16e34424fe53aa4c54573a6e874",
+      "entradas": 433
     },
     "animation.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
-      "sha256": "666aad1d5abd6d0ecea83612ee63a085e14f5d12fc43c5f6ed94e0e23baf9074",
+      "sha256": "b9160a576bdfc589ebbf7b08e773cae08ddd198b4a3990261b8201750e80eea2",
       "entradas": 176
     },
     "comedy.m3u": {
@@ -38,7 +38,7 @@
     },
     "index.m3u": {
       "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "sha256": "a697c427035fd93392b8894d962aac84ee30befc778890acf5b49ca9f05a3a28",
+      "sha256": "807afbd095fb081d114a4678bab57aa4bfad0581e91adc253a667d6c4b16b19f",
       "entradas": 11340
     },
     "mx_pluto.m3u": {
