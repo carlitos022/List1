@@ -18,8 +18,8 @@
     },
     "playlist.m3u8": {
       "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
-      "sha256": "2bba911abd78e765920abaa6f8535a55bcc8a2898b4038bed9ac709406093355",
-      "entradas": 2052
+      "sha256": "9c387d344dab5680df092f4edd1ce08e5d3cb6aeb5e5f8c1f9bd8fef1b4800f7",
+      "entradas": 2053
     },
     "kids.m3u": {
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
