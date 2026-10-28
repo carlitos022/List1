@@ -427,12 +427,12 @@ https://rtvclive.flumotion.cloud/rtvc1live/smil:channel1PRG.smil/playlist.m3u8
 https://cloud.tvomix.com/TITOTV/index.m3u8
 #EXTINF:-1 tvg-id="TVA.es@SD" tvg-logo="https://i.imgur.com/aobkgrS.png" group-title="🇪🇸 España • 📁 Undefined",TVA (Spain) (576p)
 https://streaming007.gestec-video.com/hls/artequatreTVA.m3u8
-#EXTINF:-1 tvg-id="TVEInternacionalAmerica.es@SD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional America (576p) [Geo-blocked]
-https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_ame_main_576.m3u8
+#EXTINF:-1 tvg-id="TVEInternacionalAmerica.es@SD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional America
+http://116.121.59.72:9981/stream/channel/75f703b52ec2465e4ed2934b98f0f77a
 #EXTINF:-1 tvg-id="TVEInternacionalAmerica.es@HD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional America HD (1080p) [Geo-blocked]
 https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_ame_main_1080.m3u8
-#EXTINF:-1 tvg-id="TVEInternacionalAsiaOceania.es@SD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional Asia-Oceania (576p) [Geo-blocked]
-https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_asia_main_576.m3u8
+#EXTINF:-1 tvg-id="TVEInternacionalAsiaOceania.es@SD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional Asia-Oceania
+http://103.172.29.30:9991/stream/channel/a23a4ab90fe7569ced31e455b752ab51
 #EXTINF:-1 tvg-id="TVEInternacionalAsiaOceania.es@HD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional Asia-Oceania HD (1080p) [Geo-blocked]
 https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_asia_main_1080.m3u8
 #EXTINF:-1 tvg-id="TVEInternacionalEurope.es@SD" tvg-logo="https://i.ibb.co/RpKLCMvp/tve.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="🇪🇸 España • 📁 Undefined",TVE Internacional Europe
@@ -674,6 +674,8 @@ http://209.14.115.253:8081/azteca-deportes/index.m3u8
 http://168.196.127.137:6001/play/a08r/index.m3u8
 #EXTINF:-1 tvg-id="PXSports.mx@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/PX_Sports_-_Logo.png/960px-PX_Sports_-_Logo.png" group-title="🇲🇽 Mexico • ⚽ Deportes",PX Sports (1080p)
 http://38.252.238.18:8000/play/a02f/index.m3u8
+#EXTINF:-1 tvg-id="SkySports1.mx@SD" tvg-logo="https://i.imgur.com/9onSfMi.png" group-title="🇲🇽 Mexico • ⚽ Deportes",Sky Sports 1 (1080p)
+http://45.228.234.9:8000/play/a06b/index.m3u8
 #EXTINF:-1 tvg-id="TVCuatro43.mx@SD" tvg-logo="https://i.imgur.com/Of044Jx.png" group-title="🇲🇽 Mexico • ⚽ Deportes",TV Cuatro 4.3 (1080p)
 https://5ca3e84a76d30.streamlock.net/tv43gto/tv43gto.smil/.m3u8
 #EXTINF:-1 tvg-id="AzCinema.mx@SD" tvg-logo="https://i.imgur.com/B5UN7C8.png" group-title="🇲🇽 Mexico • 🎬 Peliculas",Az Cinema (1080p)
@@ -890,6 +892,8 @@ https://srspsn.live/live/livestream.m3u8
 https://thm-it-roku.otteravision.com/thm/it/it.m3u8
 #EXTINF:-1 tvg-id="Canal33Tijuana.mx@SD" tvg-logo="https://iili.io/JCt1Nbn.png" group-title="🇲🇽 Mexico • 📁 General;News",Canal 33 Tijuana (720p)
 https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist.m3u8
+#EXTINF:-1 tvg-id="AzMundo.mx@SD" tvg-logo="https://i.imgur.com/a7Ejid0.png" group-title="🇲🇽 Mexico • 📁 Undefined",Az Mundo (1080p)
+http://15.204.142.109:22880/DIRECTV-ARGENTINA-AZMUNDO/INTERNACIONAL/video.m3u8
 #EXTINF:-1 tvg-id="Canal10Cancun.mx@SD" tvg-logo="https://i.imgur.com/TvTn3hO.png" group-title="🇲🇽 Mexico • 📁 Undefined",Canal 10 Cancun (720p) [Not 24/7]
 http://stream2.dynalias.com:1935/live/tvlive1/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal22Nacional.mx@SD" tvg-logo="https://i.imgur.com/6qiYvhe.png" group-title="🇲🇽 Mexico • 📁 Undefined",Canal 22 Nacional (720p) [Geo-blocked]
@@ -1266,7 +1270,7 @@ http://190.93.224.42/LIGA-1-MAX/index.m3u8
 #EXTINF:-1 tvg-id="MonterricoTV.pe@SD" tvg-logo="https://i.imgur.com/SuVO9T7.png" group-title="🇵🇪 Peru • ⚽ Deportes",Monterrico TV
 https://h.jcp.live.opencaster.com/play_src/index.m3u8
 #EXTINF:-1 tvg-id="MovistarDeportes.pe@SD" tvg-logo="https://i.imgur.com/Zt3iE86.png" group-title="🇵🇪 Peru • ⚽ Deportes",Movistar Deportes (1080p)
-http://45.4.1.201:8000/play/a13e/index.m3u8
+http://195.178.110.110/movistar/index.m3u8
 #EXTINF:-1 tvg-id="OvacionTV.pe@SD" tvg-logo="https://i.imgur.com/7Xndgxk.png" group-title="🇵🇪 Peru • ⚽ Deportes",Ovacion TV (720p) [Not 24/7]
 http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
 #EXTINF:-1 tvg-id="SqalaTV.pe@SD" tvg-logo="https://i.imgur.com/DJ05m8s.png" group-title="🇵🇪 Peru • ⚽ Deportes",Sqala TV (720p)
@@ -1466,8 +1470,8 @@ https://live-evg5.tv360.bitel.com.pe/bitel/yurivisionSRT/playlist.m3u8
 https://cloudvideo.servers10.com:8081/impactotv/index.m3u8
 #EXTINF:-1 tvg-id="LaTele.pe@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LaTele_Per%C3%BA_2018_Logo.png/960px-LaTele_Per%C3%BA_2018_Logo.png" group-title="🇵🇪 Peru • 🎭 Entretenimiento",La Tele (1080p)
 http://190.93.224.42/LA-TELE/index.m3u8
-#EXTINF:-1 tvg-id="MovistarPlus.pe@SD" tvg-logo="https://i.imgur.com/yGQGDoi.png" group-title="🇵🇪 Peru • 🎭 Entretenimiento",Movistar Plus (1080p)
-http://200.62.239.170:830/play/a08z/index.m3u8
+#EXTINF:-1 tvg-id="MovistarPlus.pe@SD" tvg-logo="https://i.imgur.com/yGQGDoi.png" group-title="🇵🇪 Peru • 🎭 Entretenimiento",Movistar Plus (576p)
+http://45.4.1.201:8000/play/a19y/index.m3u8
 #EXTINF:-1 tvg-id="RikuTV.pe@SD" tvg-logo="https://i.imgur.com/XIDC4Mv.png" group-title="🇵🇪 Peru • 🎭 Entretenimiento",Riku TV (1080p)
 https://amixtv.com:8081/rikutv/index.m3u8
 #EXTINF:-1 tvg-id="WEST.pe@SD" tvg-logo="https://aptcperu.org/wp-content/uploads/2026/04/logoMesa-de-trabajo-1-copia-5.png" group-title="🇵🇪 Peru • 🎭 Entretenimiento",WEST (1080p)
@@ -2098,8 +2102,8 @@ https://tvstream.upea.bo/hls/oSs0jSWumTFIIVY97559.m3u8
 https://www.sccbolivia.com/dash/720p.mpd
 #EXTINF:-1 tvg-id="RedTVShop.bo@SD" tvg-logo="https://i.imgur.com/I7yB176.png" group-title="🇧🇴 Bolivia • 🛍️ Compras",Red TV Shop (720p)
 https://master.tucableip.com/redtvshop/index.m3u8
-#EXTINF:-1 tvg-id="FUTV.cr@SD" tvg-logo="https://i.imgur.com/f8BkLql.png" group-title="🇨🇷 Costa Rica • ⚽ Deportes",FUTV
-http://190.61.90.17:40000/play/a03v/index.m3u8
+#EXTINF:-1 tvg-id="FUTV.cr@SD" tvg-logo="https://i.imgur.com/f8BkLql.png" group-title="🇨🇷 Costa Rica • ⚽ Deportes",FUTV (1080p)
+http://45.228.234.9:8000/play/a06o/index.m3u8
 #EXTINF:-1 tvg-id="NorteInformativoTV.cr@SD" tvg-logo="https://i.ibb.co/2MNzXN7/Channels4-profile-9.jpg" group-title="🇨🇷 Costa Rica • 📰 Noticias",Norte Informativo TV (240p)
 https://videohd.live:19360/8076/8076.m3u8
 #EXTINF:-1 tvg-id="88Stereo.cr@SD" tvg-logo="https://i.imgur.com/i3YwORV.png" group-title="🇨🇷 Costa Rica • 🎵 Musica",88 Stereo (720p) [Not 24/7]
@@ -2848,6 +2852,8 @@ https://netzerstreaming.com:4433/hls/olammetro/index.m3u8
 https://hdbox.chunklistv.com/live?stream=3abn-nicaragua
 #EXTINF:-1 tvg-id="Canal10.ni@SD" tvg-logo="https://i.imgur.com/ztp781b.png" group-title="🇳🇮 Nicaragua • 📺 General",Canal 10 (Nicaragua)
 https://ddycmnicl95kp.cloudfront.net/live/ja5k3h31wv9r/master.m3u8
+#EXTINF:-1 tvg-id="Canal12.ni@SD" tvg-logo="https://i.imgur.com/UhEW8cj.png" group-title="🇳🇮 Nicaragua • 📺 General",Canal 12 (Nicaragua) (576p)
+http://45.228.234.9:8000/play/a06s/index.m3u8
 #EXTINF:-1 tvg-id="CanalCvision.ni@SD" tvg-logo="https://i.imgur.com/WUq3NlG.png" group-title="🇳🇮 Nicaragua • 📺 General",Canal Cvision (720p) [Not 24/7]
 https://stream.cvision.live/cvision_stream.m3u8
 #EXTINF:-1 tvg-id="MTVChontales.ni@SD" tvg-logo="https://i.imgur.com/zgUPYdv.png" group-title="🇳🇮 Nicaragua • 📺 General",MTV Chontales (720p) [Not 24/7]
@@ -3124,6 +3130,8 @@ https://5e50264bd6766.streamlock.net/canal11ury/videocanal11ury/playlist.m3u8
 https://stmv.gmpro.top/surtv/surtv/playlist.m3u8
 #EXTINF:-1 tvg-id="UCL.uy@SD" tvg-logo="https://i.imgur.com/BzQphbw.png" group-title="🇺🇾 Uruguay • 🎨 Cultura",UCL (1080p)
 https://livedelta.cdn.antel.net.uy/out/u/url_canalu_2.m3u8?m=1670250741
+#EXTINF:-1 tvg-id="beINSPORTSXTRAenEspanol.us@SD" tvg-logo="https://i.imgur.com/V562tpO.png" group-title="🌐 Otros en espanol • ⚽ Deportes",beIN SPORTS XTRA en Espanol (1080p)
+https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
 #EXTINF:-1 tvg-id="DSports.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/DirecTV_Sports_Latin_America_%282018%29.png/960px-DirecTV_Sports_Latin_America_%282018%29.png" group-title="🌐 Otros en espanol • ⚽ Deportes",DSports (1080p)
 http://38.187.7.252:8000/play/a03d/index.m3u8
 #EXTINF:-1 tvg-id="DSports2.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/DIRECTV_Sports_2_Latin_America_%282018%29.svg/960px-DIRECTV_Sports_2_Latin_America_%282018%29.svg.png" group-title="🌐 Otros en espanol • ⚽ Deportes",DSports 2 (1080p)
@@ -3162,6 +3170,10 @@ https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/espn-mux/chunks.m3u8
 http://190.61.47.54:8000/play/a004/index.m3u8
 #EXTINF:-1 tvg-id="ESPNLatinAmerica.us@Mexico" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png" group-title="🌐 Otros en espanol • ⚽ Deportes",ESPN Latin America Mexico (1080p)
 http://168.228.44.241:9997/play/a06p/index.m3u8
+#EXTINF:-1 tvg-id="Eurosport1.fr@Spain" tvg-logo="https://i.imgur.com/olQJgm7.png" group-title="🌐 Otros en espanol • ⚽ Deportes",Eurosport 1 Spain (576p)
+http://45.134.141.161:2200/ARG/Eurosport_1_HD/index.m3u8
+#EXTINF:-1 tvg-id="Eurosport2.fr@Spain" tvg-logo="https://i.imgur.com/f56dHgR.png" group-title="🌐 Otros en espanol • ⚽ Deportes",Eurosport 2 Spain (1080p)
+http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8
 #EXTINF:-1 tvg-id="FIFAPlus.uk@HispanicAmerica" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png" group-title="🌐 Otros en espanol • ⚽ Deportes",FIFA+ Hispanic America (720p)
 https://6c849fb3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctbXhfRklGQVBsdXNTcGFuaXNoLTFfSExT/playlist.m3u8
 #EXTINF:-1 tvg-id="FIFAPlus.uk@Spain" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png" group-title="🌐 Otros en espanol • ⚽ Deportes",FIFA+ Spain (720p)
@@ -3432,6 +3444,8 @@ https://jmp2.uk/plu-6868152657543d1f8be4ece3.m3u8
 https://s2.tvdatta.com:3307/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="HTV.us@SD" tvg-logo="https://i.imgur.com/NlKFNHS.png" group-title="🌐 Otros en espanol • 🎵 Musica",HTV (720p)
 http://45.171.64.30:6060/play/a012/index.m3u8
+#EXTINF:-1 tvg-id="HTV.us@Argentina" tvg-logo="https://i.imgur.com/NlKFNHS.png" group-title="🌐 Otros en espanol • 🎵 Musica",HTV Argentina (720p)
+http://45.134.141.161:2200/ARG/HTV/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaReggaeton.us@SD" tvg-logo="https://i.imgur.com/MMb9u4u.png" group-title="🌐 Otros en espanol • 🎵 Musica",Mi Musica Reggaeton (1080p)
 http://181.78.12.119:16123/play/ch53/index.m3u8
 #EXTINF:-1 tvg-id="MiMusicaRomantica.us@SD" tvg-logo="https://i.imgur.com/eIaRv0U.png" group-title="🌐 Otros en espanol • 🎵 Musica",Mi Musica Romantica (1080p)
@@ -3817,8 +3831,8 @@ https://jmp2.uk/plu-65df7272ec9fda0008b7a970.m3u8
 https://jmp2.uk/plu-65df73520d4561000817c29b.m3u8
 #EXTINF:-1 tvg-id="SouthParkColeccionStan.us@LatAm" tvg-logo="https://images.pluto.tv/channels/65df72db18036500081a8292/colorLogoPNG.png" group-title="🌐 Otros en espanol • 📁 Animation;Comedy",South Park: Coleccion Stan
 https://jmp2.uk/plu-65df72db18036500081a8292.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Cartoon Network (United States) (720p)
-http://tvsen7.aynascope.net/cartoonnetwork/index.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Cartoon Network (United States) (720p) [Geo-blocked]
+http://212.5.144.156:8080/cartoon/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkLatinAmerica.us@SouthAtlanticHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 VLC/3.0.18 LibVLC/3.0.18" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Cartoon Network Latin America
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 VLC/3.0.18 LibVLC/3.0.18
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cartoonnetwork.stream/chunks.m3u8
@@ -3838,6 +3852,8 @@ http://15.204.246.24:8080/KidooHD/index.m3u8
 https://amg00627-amg00627c30-rakuten-es-3990.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanescc-rakutenes/playlist.m3u8
 #EXTINF:-1 tvg-id="Tooncast.us@SD" tvg-logo="https://i.imgur.com/3yXRbQy.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Tooncast (1080p)
 http://38.134.250.110:8000/play/a01t/index.m3u8
+#EXTINF:-1 tvg-id="Tooncast.us@Argentina" tvg-logo="https://i.imgur.com/3yXRbQy.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Tooncast Argentina (720p)
+http://45.134.141.161:2200/ARG/Tooncast/index.m3u8
 #EXTINF:-1 tvg-id="Tooncast.us@SouthAmerica" tvg-logo="https://i.imgur.com/3yXRbQy.png" group-title="🌐 Otros en espanol • 📁 Animation;Kids",Tooncast SouthAmerica (480p)
 http://190.61.42.218:9000/play/a06i/index.m3u8
 #EXTINF:-1 tvg-id="PlutoTVComediasRomanticas.de@ES" tvg-logo="https://images.pluto.tv/channels/655b5d865812e80008843bd1/colorLogoPNG_1747044085522.png" group-title="🌐 Otros en espanol • 📁 Comedy;Movies",Pluto TV Comedias Romanticas
@@ -3931,6 +3947,8 @@ http://190.197.41.183/TELEXITOS/index.m3u8
 https://jmp2.uk/plu-5e82bb378601b80007b4bd78.m3u8
 #EXTINF:-1 tvg-id="TNTLatinAmerica.us@Center" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" group-title="🌐 Otros en espanol • 📁 Undefined",TNT Latin America (1080p)
 http://45.171.64.30:6060/play/a03i/index.m3u8
+#EXTINF:-1 tvg-id="TNTLatinAmerica.us@Argentina" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" group-title="🌐 Otros en espanol • 📁 Undefined",TNT Latin America Argentina (1080p)
+http://45.134.141.161:2200/ARG/TNT/index.m3u8
 #EXTINF:-1 tvg-id="TNTLatinAmerica.us@Colombia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" group-title="🌐 Otros en espanol • 📁 Undefined",TNT Latin America Colombia (1080p)
 http://181.78.211.244:8005/play/a09g/index.m3u8
 #EXTINF:-1 tvg-id="TNTLatinAmerica.us@South" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 VLC/3.0.18 LibVLC/3.0.18" group-title="🌐 Otros en espanol • 📁 Undefined",TNT Latin America South
@@ -3958,6 +3976,8 @@ http://168.228.44.241:9997/play/a09d/index.m3u8
 http://138.121.15.230:9002/USA/index.m3u8
 #EXTINF:-1 tvg-id="DiscoveryScienceLatinAmerica.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Discovery_science_new_logo_2017.png/960px-Discovery_science_new_logo_2017.png" group-title="🌐 Otros en espanol • 🔬 Ciencia",Discovery Science Latin America (720p)
 http://45.171.64.30:6060/play/a007/index.m3u8
+#EXTINF:-1 tvg-id="DiscoveryScienceLatinAmerica.us@ColombiaPeru" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Discovery_science_new_logo_2017.png/960px-Discovery_science_new_logo_2017.png" group-title="🌐 Otros en espanol • 🔬 Ciencia",Discovery Science Latin America ColombiaPeru (720p)
+http://45.134.141.161:2200/ARG/Discovery_Science_HD/index.m3u8
 #EXTINF:-1 tvg-id="ComediaalobestiadePlutoTV.de@ES" tvg-logo="https://images.pluto.tv/channels/68de3db35fc0afe85de0b843/colorLogoPNG_1759402494389.png" group-title="🌐 Otros en espanol • 😂 Comedia",Comedia a lo bestia de Pluto TV
 https://jmp2.uk/plu-68de3db35fc0afe85de0b843.m3u8
 #EXTINF:-1 tvg-id="ComedyCentralenEspanol.us@SD" tvg-logo="https://i.imgur.com/6xTD3G8.png" group-title="🌐 Otros en espanol • 😂 Comedia",Comedy Central en Espanol
