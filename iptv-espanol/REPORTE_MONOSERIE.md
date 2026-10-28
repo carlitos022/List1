@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-10-27
+Auditoría UTC: 2026-10-28
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
@@ -13,7 +13,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Animación adulta | South Park 24/7 | SouthPark.se@SE | up |
 | 📺 24/7 • Animación adulta | South Park 24/7 | SouthPark.se@DK | up |
 | 📺 24/7 • Animación adulta | South Park 24/7 | SouthPark.se@NO | up |
-| 📺 24/7 • Animación adulta | South Park 24/7 | SouthPark.us@CA | up |
+| 📺 24/7 • Animación adulta | South Park 24/7 | SouthPark.us@CA | unknown |
 | 📺 24/7 • Anime | Death Note 24/7 |  | up |
 | 📺 24/7 • Anime | Detective Conan 24/7 | DetectiveConan.us@Spain | up |
 | 📺 24/7 • Anime | Detective Conan 24/7 | DetectiveConan.us@France | up |
@@ -29,7 +29,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@US | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@US | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@BR | up |
-| 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@CA | up |
+| 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@CA | unknown |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@FR | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@LatAm | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@Spain | up |
@@ -45,7 +45,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | Avatar: La Leyenda de Aang 24/7 | AvatarLaLeyendadeAang.us@LatAm | up |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | BobEsponja.de@ES | up |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | BobEsponjaPantalonesCuadrados.us@LatAm | up |
-| 📺 24/7 • Infancia | Bob Esponja 24/7 | SpongeBobSquarePants.us@CA | up |
+| 📺 24/7 • Infancia | Bob Esponja 24/7 | SpongeBobSquarePants.us@CA | unknown |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | SuperSpongeBob.us@Italy | up |
 | 📺 24/7 • Infancia | El Chavo 24/7 | ElChavoTV.mx@HD | up |
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
