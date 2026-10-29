@@ -1,7 +1,7 @@
 Fuente: https://iptv-org.github.io/iptv/languages/spa.m3u
-Canales procesados: 2423
-Entradas locales lista TV: 1962
-Entradas tematicas lista TV: 785
+Canales procesados: 2425
+Entradas locales lista TV: 1963
+Entradas tematicas lista TV: 786
 Señales temáticas adicionales: 54
 Películas adicionales: 94
 Series adicionales: 48
@@ -9,13 +9,13 @@ Canales monoserie 24/7 identificados: 99
 Hallazgos internacionales de series: 131
 Canales Free-TV en español: 1890
 
-🌐 Otros en espanol: 461
+🌐 Otros en espanol: 462
 🇩🇴 Republica Dominicana: 250
 🇨🇱 Chile: 232
 🇪🇸 España: 197
 🇦🇷 Argentina: 192
 🇲🇽 Mexico: 176
-🇵🇪 Peru: 172
+🇵🇪 Peru: 173
 🇨🇴 Colombia: 124
 🇪🇨 Ecuador: 82
 🇭🇳 Honduras: 79
