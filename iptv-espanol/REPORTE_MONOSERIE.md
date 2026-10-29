@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-10-28
+Auditoría UTC: 2026-10-29
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
@@ -48,7 +48,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | SpongeBobSquarePants.us@CA | unknown |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | SuperSpongeBob.us@Italy | up |
 | 📺 24/7 • Infancia | El Chavo 24/7 | ElChavoTV.mx@HD | up |
-| 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
+| 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | unknown |
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
 | 📺 24/7 • Infancia | Hey Arnold! 24/7 | HeyArnold.us@LatAm | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.de@ES | up |
@@ -85,8 +85,8 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Series | Ana y los 7 24/7 | Anaylos7.us@Spain | up |
 | 📺 24/7 • Series | CSI: Miami 24/7 | CSIMiami.us@SD | up |
 | 📺 24/7 • Series | CSI: Miami 24/7 | CSIMiami.us@BR | up |
-| 📺 24/7 • Series | CSI: Miami 24/7 | CSIMiami.us@LatAm | up |
-| 📺 24/7 • Series | Curro Jiménez 24/7 | CurroJimenez.us@Spain | up |
+| 📺 24/7 • Series | CSI: Miami 24/7 | CSIMiami.us@LatAm | unknown |
+| 📺 24/7 • Series | Curro Jiménez 24/7 | CurroJimenez.us@Spain | unknown |
 | 📺 24/7 • Series | El Comisario 24/7 | ElComisario.us@Spain | up |
 | 📺 24/7 • Series | El encantador de perros 24/7 | Elencantadordeperros.us@Spain | up |
 | 📺 24/7 • Series | El encantador de perros 24/7 | Elencantadordeperros.us@Spain | up |
@@ -98,7 +98,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Series | Medium 24/7 | Medium.se@NO | up |
 | 📺 24/7 • Series | NCIS 24/7 | NCIS.se@DK | up |
 | 📺 24/7 • Series | NCIS 24/7 | NCIS.us@BR | up |
-| 📺 24/7 • Series | NCIS 24/7 | NCIS.us@CA | up |
+| 📺 24/7 • Series | NCIS 24/7 | NCIS.us@CA | unknown |
 | 📺 24/7 • Series | NCIS 24/7 | NCIS.us@LatAm | up |
 | 📺 24/7 • Series | Star Trek: Voyager 24/7 | StarTrekVoyager.de@IT | up |
 | 📺 24/7 • Series | Star Trek: Voyager 24/7 | StarTrekVoyager.us@SD | up |
