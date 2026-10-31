@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-10-30
+Auditoría UTC: 2026-10-31
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
@@ -47,7 +47,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | BobEsponjaPantalonesCuadrados.us@LatAm | up |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | SpongeBobSquarePants.us@CA | up |
 | 📺 24/7 • Infancia | Bob Esponja 24/7 | SuperSpongeBob.us@Italy | up |
-| 📺 24/7 • Infancia | El Chavo 24/7 | ElChavoTV.mx@HD | unknown |
+| 📺 24/7 • Infancia | El Chavo 24/7 | ElChavoTV.mx@HD | up |
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
 | 📺 24/7 • Infancia | Hey Arnold! 24/7 | HeyArnold.us@LatAm | up |

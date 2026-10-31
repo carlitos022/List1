@@ -79,6 +79,8 @@ https://jmp2.uk/plu-6254598f5083f800076d8563.m3u8
 https://jmp2.uk/plu-63f87d057533d80008ab9549.m3u8
 #EXTINF:-1 tvg-id="SuperSpongeBob.us@Italy" tvg-logo="https://i.imgur.com/65wxNn4.png" group-title="📺 24/7 • Infancia",Bob Esponja 24/7
 https://jmp2.uk/plu-6093f9281db477000759fce0.m3u8
+#EXTINF:-1 tvg-id="ElChavoTV.mx@HD" tvg-logo="https://gia.tv/streams/pptv/211465.png" group-title="📺 24/7 • Infancia",El Chavo 24/7
+https://live20.bozztv.com/giatvplayout7/giatv-211465/playlist.m3u8
 #EXTINF:-1 tvg-id="GarfieldandFriends.us@US" tvg-logo="https://i.imgur.com/evzfe9C.png" group-title="📺 24/7 • Infancia",Garfield y sus amigos 24/7
 https://jmp2.uk/plu-677f927554f43dad4b3258aa.m3u8
 #EXTINF:-1 tvg-id="GarfieldandFriends.us@US" group-title="📺 24/7 • Infancia",Garfield y sus amigos 24/7
