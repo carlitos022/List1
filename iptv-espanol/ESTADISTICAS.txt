@@ -1,6 +1,6 @@
 Fuente: https://iptv-org.github.io/iptv/languages/spa.m3u
-Canales procesados: 2401
-Entradas locales lista TV: 1935
+Canales procesados: 2400
+Entradas locales lista TV: 1934
 Entradas tematicas lista TV: 780
 Señales temáticas adicionales: 53
 Películas adicionales: 92
@@ -22,8 +22,8 @@ Canales Free-TV en español: 1890
 🇻🇪 Venezuela: 73
 🇨🇷 Costa Rica: 69
 🇵🇾 Paraguay: 67
-🇧🇴 Bolivia: 65
 🇬🇹 Guatemala: 65
+🇧🇴 Bolivia: 64
 🇸🇻 El Salvador: 39
 🇵🇷 Puerto Rico: 25
 🇵🇦 Panama: 24
