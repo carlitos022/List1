@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-11-01
+Auditoría UTC: 2026-11-02
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
