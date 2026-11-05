@@ -1,6 +1,6 @@
 # Disponibilidad de canales monoserie
 
-Auditoría UTC: 2026-11-04
+Auditoría UTC: 2026-11-05
 
 La clasificación temática viene de las fuentes oficiales/catálogo editorial.
 La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en Ecuador.
@@ -33,9 +33,9 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@FR | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@LatAm | up |
 | 📺 24/7 • Anime | One Piece 24/7 | OnePiece.us@Spain | up |
-| 📺 24/7 • Anime | Pokémon 24/7 | PlutoTVPokemon.us@US | up |
-| 📺 24/7 • Anime | Pokémon 24/7 | PlutoTVPokemon.us@US | up |
-| 📺 24/7 • Anime | Pokémon 24/7 | PlutoTVPokemon.us@UK | up |
+| 📺 24/7 • Anime | Pokémon 24/7 |  | up |
+| 📺 24/7 • Anime | Pokémon 24/7 |  | up |
+| 📺 24/7 • Anime | Pokémon 24/7 |  | up |
 | 📺 24/7 • Anime | Pokémon 24/7 |  | up |
 | 📺 24/7 • Anime | Pokémon 24/7 |  | up |
 | 📺 24/7 • Anime | Pokémon 24/7 |  | up |
@@ -51,7 +51,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
 | 📺 24/7 • Infancia | Garfield y sus amigos 24/7 | GarfieldandFriends.us@US | up |
 | 📺 24/7 • Infancia | Hey Arnold! 24/7 | HeyArnold.us@LatAm | up |
-| 📺 24/7 • Infancia | iCarly 24/7 | iCarly.de@ES | up |
+| 📺 24/7 • Infancia | iCarly 24/7 |  | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.se@SE | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.se@DK | up |
 | 📺 24/7 • Infancia | iCarly 24/7 | iCarly.se@NO | up |
@@ -62,7 +62,7 @@ La prueba HLS indica acceso desde GitHub, no transmisión continua ni acceso en 
 | 📺 24/7 • Infancia | Kenan & Kel 24/7 | KenanKel.us@LatAm | up |
 | 📺 24/7 • Infancia | Kenan & Kel 24/7 | KenanKel.us@BR | up |
 | 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | LasTortugasNinja.us@LatAm | up |
-| 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | LasTortugasNinja.de@ES | up |
+| 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 |  | up |
 | 📺 24/7 • Infancia | Las Tortugas Ninja 24/7 | TeenageMutantNinjaTurtles.de@IT | up |
 | 📺 24/7 • Infancia | Los padrinos mágicos 24/7 |  | up |
 | 📺 24/7 • Infancia | Los Pitufos 24/7 |  | up |
