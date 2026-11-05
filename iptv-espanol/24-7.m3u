@@ -51,11 +51,11 @@ https://jmp2.uk/plu-6380c94947c72b0007ee9a13.m3u8
 https://jmp2.uk/plu-5ff4b9ccf938f8000779eb99.m3u8
 #EXTINF:-1 tvg-id="OnePiece.us@Spain" tvg-logo="https://i.imgur.com/XsvbAWR.png" group-title="📺 24/7 • Anime",One Piece 24/7
 https://jmp2.uk/plu-680ba8992472a7200a183eb5.m3u8
-#EXTINF:-1 tvg-id="PlutoTVPokemon.us@US" group-title="📺 24/7 • Anime",Pokémon 24/7
+#EXTINF:-1 tvg-id="" group-title="📺 24/7 • Anime",Pokémon 24/7
 https://jmp2.uk/plu-6870072ca9d5c45c3e9466f1.m3u8
-#EXTINF:-1 tvg-id="PlutoTVPokemon.us@US" group-title="📺 24/7 • Anime",Pokémon 24/7
+#EXTINF:-1 tvg-id="" group-title="📺 24/7 • Anime",Pokémon 24/7
 https://jmp2.uk/plu-6675c7868768aa0008d7f1c7.m3u8
-#EXTINF:-1 tvg-id="PlutoTVPokemon.us@UK" group-title="📺 24/7 • Anime",Pokémon 24/7
+#EXTINF:-1 tvg-id="" group-title="📺 24/7 • Anime",Pokémon 24/7
 https://jmp2.uk/plu-6683cd71a1d7ad000866ec6a.m3u8
 #EXTINF:-1 tvg-id="" group-title="📺 24/7 • Anime",Pokémon 24/7
 https://docpe51mdltl5.cloudfront.net/Pokemon_GB.m3u8
@@ -87,7 +87,7 @@ https://jmp2.uk/plu-677f927554f43dad4b3258aa.m3u8
 https://jmp2.uk/plu-60faf9ddfcc1f200070a5932.m3u8
 #EXTINF:-1 tvg-id="HeyArnold.us@LatAm" tvg-logo="https://images.pluto.tv/channels/66c79221b1a34600087e264d/colorLogoPNG.png" group-title="📺 24/7 • Infancia",Hey Arnold! 24/7
 https://jmp2.uk/plu-66c79221b1a34600087e264d.m3u8
-#EXTINF:-1 tvg-id="iCarly.de@ES" group-title="📺 24/7 • Infancia",iCarly 24/7
+#EXTINF:-1 tvg-id="" group-title="📺 24/7 • Infancia",iCarly 24/7
 https://jmp2.uk/plu-6181404ef48321000797bc41.m3u8
 #EXTINF:-1 tvg-id="iCarly.se@SE" tvg-logo="https://images.pluto.tv/channels/61c0b9aab7facb0007913908/colorLogoPNG.png" group-title="📺 24/7 • Infancia",iCarly 24/7
 https://jmp2.uk/plu-61c185049e0bde0007820039.m3u8
@@ -109,7 +109,7 @@ https://jmp2.uk/plu-5fcea93ffcf94500071c4b2f.m3u8
 https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8
 #EXTINF:-1 tvg-id="LasTortugasNinja.us@LatAm" tvg-logo="https://i.imgur.com/urJdNc9.png" group-title="📺 24/7 • Infancia",Las Tortugas Ninja 24/7
 https://jmp2.uk/plu-63dd5d7a4e83e700088fbca8.m3u8
-#EXTINF:-1 tvg-id="LasTortugasNinja.de@ES" group-title="📺 24/7 • Infancia",Las Tortugas Ninja 24/7
+#EXTINF:-1 tvg-id="" group-title="📺 24/7 • Infancia",Las Tortugas Ninja 24/7
 https://jmp2.uk/plu-61373f1a12dd9f00077dcd6f.m3u8
 #EXTINF:-1 tvg-id="TeenageMutantNinjaTurtles.de@IT" tvg-logo="https://images.pluto.tv/channels/62619405c733e8000732d1fe/colorLogoPNG.png" group-title="📺 24/7 • Infancia",Las Tortugas Ninja 24/7
 https://jmp2.uk/plu-62619405c733e8000732d1fe.m3u8
