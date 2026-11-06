@@ -721,8 +721,6 @@ https://live.lavozdemaria.com:3436/live/lavozdemarialive.m3u8
 https://tv.wracanal10.com:3776/live/luzdivinatvlive.m3u8
 #EXTINF:-1 tvg-id="LuzNacienteTV.cr@SD" tvg-logo="https://i.imgur.com/GC2lubh.png" group-title="OTROS LATINOAMERICA - RELIGION",Luz Naciente TV
 https://streeming.protoscr.com:3858/live/streeminglive.m3u8
-#EXTINF:-1 tvg-id="MCNTelevision.gt@SD" tvg-logo="https://i.imgur.com/SNUaCCw.png" group-title="OTROS LATINOAMERICA - RELIGION",MCN Television (720p)
-https://eu1.servers10.com:8081/8338/index.m3u8
 #EXTINF:-1 tvg-id="MINFAVTV.pa@SD" tvg-logo="https://i.ibb.co/Vj5nNbF/FAV-TV-LOGO-BLANCO.png" group-title="OTROS LATINOAMERICA - RELIGION",MINFAV TV
 https://mp.panelchs.com:1936/8044/8044/playlist.m3u8
 #EXTINF:-1 tvg-id="MisionELTV.do@SD" tvg-logo="https://i.imgur.com/hwC1stN.png" group-title="OTROS LATINOAMERICA - RELIGION",Mision ELTV (720p)
